@@ -48,9 +48,13 @@ shared/tokens (Polygon contracts)
 shared (Polygon contracts)
 ```
 `Adminable`: Base contract for allow contracts to limit callers of functions to approved sending addresses
+<br/>
 `AdminableUpgradeable`: Same as Adminable but utilizing openzeppelin's upgradeable contract pattern
+<br/>
 `Base64ableUpgradeable`: Base contract that allows sharing base64 logic
+<br/>
 `Utilities`: Base contract with helper modifiers for reusability
+<br/>
 `UtilitiesUpgradeable`: Same as Utilities but utilizing openzeppelin's upgradeable contract pattern
 
 ```
@@ -63,14 +67,18 @@ wnd/graveyard (Polygon contracts)
 wnd/rift (Polygon contracts)
 ```
 `Rift`: Contract for sending/retrieving assets to/from the Ethereum network (WnD wizards/dragons, Sacrificial Alter erc1155s, Consumable erc1155s, GP erc20s). This contract is responsible for deciding if non-gen0 wizards get stolen by dragons. Also requires a certain threshold of total GP staked in order to send assets to the Ethereum network. Will mint erc721 tokens exactly as they are in the Ethereum network
+<br/>
 `RiftDragonStakable`: Handles staking and unstaking dragons into the Rift
+<br/>
 `RiftGP`: Handles staking and unstaking GP into the Rift
+<br/>
 `RiftTier`: Calculates the Rift's tier for a given address. Tier is calculated based on the amount of GP staked into the rift
 
 ```
 wnd/riftroot (Ethereum contracts)
 ```
 `RiftRoot`: Contract for sending/retrieving assets to/from the Polygon network (WnD wizards/dragons, Sacrificial Alter erc1155s, Consumable erc1155s, GP erc20s). Also requires a certain threshold of total GP staked in order to send assets to Polygon
+<br/>
 `RiftRootGP`: Handles staking / unstaking GP in the rift
 
 ```
@@ -103,7 +111,9 @@ wnd/traininggame (Polygon contracts)
 ```
 *IN PROGRESS / NOT FINAL*<br/>
 `TrainingGame`: Contract for participating in the training game for wizards staked in this contract.
+<br/>
 `TrainingGameRewards`: Handles choosing rewards from wizards who survive the training game.
+<br/>
 `TrainingGameTimeKeeper`: Handles cooldowns for wizards who have participated in the training game.
 
 
@@ -111,7 +121,9 @@ wnd/traininggame (Polygon contracts)
 wnd/traininggrounds (Polygon contracts)
 ```
 `TrainingGrounds`: Contract that handles staking assets to perform game logic in other contracts
+<br/>
 `TrainingGroundsDragonsStakable`: Handles staking / unstaking dragons
+<br/>
 `TrainingGroundsWizardStakable`: Handles staking / unstaking wizards. Implements a start/finish function to utilize Chainlink for verifiable randomness and avoid flashbot bundle exploits.
 
 ```
@@ -123,12 +135,16 @@ wnd/trainingproficiency (Polygon contracts)
 wnd/tunnels (Polygon contracts)
 ```
 `ChildTunnel`: Contract for sending and receiving messages from the Ethereum network
+<br/>
 `RootTunnel`: Contract for sending and receiving messages from the Polygon network
 
 ```
 wnd/world (Polygon contracts)
 ```
 `World`: Contract for holding information about everything in the Polygon world for WnD.
+<br/>
 `WorldRandomDragon`: Handles calculating and picking random dragons who are staked in the world. Has a bonus to being picked by location dragons are staked (currently Rift and TrainingGrounds). Also weighs picking logic by Dragon Rank (higher rank has higher chance of being picked than a lower rank)
+<br/>
 `WorldRouter`: Handles the logic of staking and unstaking wizards and dragons. Implements a start/finish function for wizard staking/unstaking to utilize Chainlink for verifiable randomness and avoid flashbot bundle exploits
+<br/>
 `WorldStorage`: Handles the transferring of wnd assets to and from the world contract. Also provides information for all staked assets
