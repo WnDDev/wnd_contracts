@@ -24,10 +24,10 @@ Contracts under the 2.0 subfolder denote contracts made for Act 1.5 / WnD Reborn
 
 ### Contract 2.0 summaries
 
-- **NOTE1**: Each contract has an interface to allow for easy cross-contract calling of external functions.
-- **NOTE2**: Each contract has a State base contract that holds all state variables and inherits and initializes all other required utility contracts + libraries to ensure upgradability without malforming storage
-- **NOTE3**: Contracts that call other contracts have Contract base classes which handles setting and requiring contracts to be set
-- **NOTE4**: Token contracts have an 'adminTransfer' function that allows admin senders to transfer tokens without approval (to save transactions + gas fees for users). These functions were separated out to not mess with the openzeppelin default implementation.
+**NOTE1**: Each contract has an interface to allow for easy cross-contract calling of external functions.
+<br/>**NOTE2**: Each contract has a State base contract that holds all state variables and inherits and initializes all other required utility contracts + libraries to ensure upgradability without malforming storage
+<br/>**NOTE3**: Contracts that call other contracts have Contract base classes which handles setting and requiring contracts to be set
+<br/>**NOTE4**: Token contracts have an 'adminTransfer' function that allows admin senders to transfer tokens without approval (to save transactions + gas fees for users). These functions were separated out to not mess with the openzeppelin default implementation.
 
 ```
 shared/ramdomizer (Polygon contracts)
@@ -56,7 +56,7 @@ shared (Polygon contracts)
 ```
 wnd/graveyard (Polygon contracts)
 ```
-*IN PROGRESS / NOT FINAL*
+*IN PROGRESS / NOT FINAL*<br/>
 `Graveyard`: Contract for storing and managing 'killed' wizards. Allows dependent contracts to retreive killed wizards per address, as well as allowing addresses to revive fallen wizards if providing phoenix downs
 
 ```
@@ -101,7 +101,7 @@ wnd/tokens/wnd (Polygon contracts)
 ```
 wnd/traininggame (Polygon contracts)
 ```
-*IN PROGRESS / NOT FINAL*
+*IN PROGRESS / NOT FINAL*<br/>
 `TrainingGame`: Contract for participating in the training game for wizards staked in this contract.
 `TrainingGameRewards`: Handles choosing rewards from wizards who survive the training game.
 `TrainingGameTimeKeeper`: Handles cooldowns for wizards who have participated in the training game.
