@@ -72,23 +72,18 @@ contract TrainingGame is Initializable, TrainingGame721Receiver, TrainingGameRew
 
         uint8 _wizardProficiency = trainingProficiency.proficiencyForWizard(_tokenId);
 
-        uint8 _chanceWizardBurned = baseChanceWizardBurned;
-        if(_wizardProficiency > maxBurnReduction) {
-            _chanceWizardBurned -= maxBurnReduction;
+        uint8 _chanceWizardKilled = _chanceWizardDies(_wizardProficiency);
+
+        uint256 _killResult = _randomness % 100;
+        // TODO Only die if equipment not equipped.
+        if(_killResult < _chanceWizardKilled) {
+            // Get killed.
+            graveyard.killWizard(_tokenId, _owner);
         } else {
-            _chanceWizardBurned -= _wizardProficiency;
-        }
-
-        uint256 _burnResult = _randomness % 100;
-        if(_burnResult < _chanceWizardBurned) {
-            // Get burnt.
-            burntWizards.add(_tokenId);
-
-            // Gone from the world forever :'(
-            world.removeWizardFromWorld(_tokenId, address(this));
-
-            emit WizardBurnt(_owner, _tokenId);
-        } else {
+            // TODO: Roll for taking damage
+            // TODO: If taking damage, check if died and send to graveyard instead of getting rewards
+            // TODO: Remove any equipment from damage or kill check if equipped
+            
             // To the rewards!
             uint256 _newRandom = uint256(keccak256(abi.encode(_randomness, _tokenId)));
 
@@ -135,6 +130,17 @@ contract TrainingGame is Initializable, TrainingGame721Receiver, TrainingGameRew
         }
 
         emit RewardMinted(_owner, _tokenId, _rewardId, _amount, _gpAmt);
+    }
+
+    function _chanceWizardDies(uint8 _wizardProficiency) private view returns(uint8) {
+        uint8 _chanceWizardBurned = baseChanceWizardBurned;
+        // Lower the % chance to be burned by 1% per proficiency level up to a max amount
+        if(_wizardProficiency > maxBurnReduction) {
+            _chanceWizardBurned -= maxBurnReduction;
+        } else {
+            _chanceWizardBurned -= _wizardProficiency;
+        }
+        return _chanceWizardBurned;
     }
 
     function isWizardTraining(uint256 _tokenId) public view override returns(bool) {

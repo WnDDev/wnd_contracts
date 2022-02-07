@@ -16,7 +16,8 @@ abstract contract RiftRootContracts is Initializable, RiftRootState {
         address _wndAddress,
         address _sacrificialAlterAddress,
         address _consumablesAddress,
-        address _rootTunnelAddress)
+        address _rootTunnelAddress,
+        address _oldTrainingGroundsAddress)
     external onlyAdminOrOwner
     {
         gp = IGP(_gpAddress);
@@ -24,6 +25,7 @@ abstract contract RiftRootContracts is Initializable, RiftRootState {
         sacrificialAlter = ISacrificialAlter(_sacrificialAlterAddress);
         consumables = IConsumables(_consumablesAddress);
         rootTunnel = IRootTunnel(_rootTunnelAddress);
+        oldTrainingGrounds = IOldTrainingGrounds(_oldTrainingGroundsAddress);
     }
 
     modifier contractsAreSet() {
@@ -31,6 +33,7 @@ abstract contract RiftRootContracts is Initializable, RiftRootState {
             && address(wnd) != address(0)
             && address(sacrificialAlter) != address(0)
             && address(rootTunnel) != address(0)
+            && address(oldTrainingGrounds) != address(0)
             && address(consumables) != address(0), "Contracts aren't set");
 
         _;

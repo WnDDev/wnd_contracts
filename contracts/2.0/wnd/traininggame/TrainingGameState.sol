@@ -9,6 +9,7 @@ import "../../shared/Adminable.sol";
 import "../../shared/randomizercl/IRandomizerCL.sol";
 import "../world/IWorld.sol";
 import "../rift/IRift.sol";
+import "../graveyard/IGraveyard.sol";
 import "../tokens/sacrificialalter/ISacrificialAlter.sol";
 import "../tokens/consumables/IConsumables.sol";
 import "../tokens/gp/IGP.sol";
@@ -19,7 +20,6 @@ abstract contract TrainingGameState is Initializable, AdminableUpgradeable {
     using EnumerableSetUpgradeable for EnumerableSetUpgradeable.UintSet;
 
     event TrainingStarted(address indexed _owner, uint256 indexed _tokenId, bytes32 indexed _requestId);
-    event WizardBurnt(address indexed _owner, uint256 indexed _tokenId);
     event RewardMinted(address indexed _owner, uint256 indexed _tokenId, uint256 indexed _rewardId, uint256 _amount, uint256 _gpAmt);
 
     struct RewardMultiplier {
@@ -42,6 +42,7 @@ abstract contract TrainingGameState is Initializable, AdminableUpgradeable {
     ITrainingProficiency public trainingProficiency;
     IRandomizerCL public randomizer;
     IRift public rift;
+    IGraveyard public graveyard;
 
     uint256 public ODDS_TOTAL;
 
@@ -58,8 +59,6 @@ abstract contract TrainingGameState is Initializable, AdminableUpgradeable {
     // Ex. proficiencyToGamesPlayed[1] = 6 means you get level 1 proficiency at 6 games.
     uint8[] internal proficiencyToGamesPlayed;
     uint256 public gameCooldownTime;
-
-    EnumerableSetUpgradeable.UintSet internal burntWizards;
 
     uint256 public trainingFee;
 

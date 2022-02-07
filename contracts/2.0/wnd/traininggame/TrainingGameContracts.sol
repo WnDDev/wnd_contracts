@@ -18,7 +18,7 @@ abstract contract TrainingGameContracts is Initializable, ITrainingGame, Trainin
         TrainingGameState.__TrainingGameState_init();
     }
 
-    function setContracts(address _worldAddress, address _sacrificialAlterAddress, address _consumables, address _gpAddress, address _wndAddress, address _trainingProficiencyAddress, address _randomizerAddress, address _riftAddress) external onlyAdminOrOwner {
+    function setContracts(address _worldAddress, address _sacrificialAlterAddress, address _consumables, address _gpAddress, address _wndAddress, address _trainingProficiencyAddress, address _randomizerAddress, address _riftAddress, address _graveyard) external onlyAdminOrOwner {
         require(_worldAddress != address(0)
             && _gpAddress != address(0)
             && _wndAddress != address(0)
@@ -26,7 +26,8 @@ abstract contract TrainingGameContracts is Initializable, ITrainingGame, Trainin
             && _randomizerAddress != address(0)
             && _sacrificialAlterAddress != address(0)
             && _consumables != address(0)
-            && _riftAddress != address(0), "Bad address.");
+            && _riftAddress != address(0)
+            && _graveyard != address(0), "Bad address.");
 
         world = IWorld(_worldAddress);
         sacrificialAlter = ISacrificialAlter(_sacrificialAlterAddress);
@@ -36,6 +37,7 @@ abstract contract TrainingGameContracts is Initializable, ITrainingGame, Trainin
         randomizer = IRandomizerCL(randomizer);
         rift = IRift(_riftAddress);
         consumables = IConsumables(_consumables);
+        graveyard = IGraveyard(_graveyard);
     }
 
     modifier contractsAreSet() {
@@ -46,7 +48,8 @@ abstract contract TrainingGameContracts is Initializable, ITrainingGame, Trainin
             && address(randomizer) != address(0)
             && address(sacrificialAlter) != address(0)
             && address(consumables) != address(0)
-            && address(rift) != address(0), "Contracts not set");
+            && address(rift) != address(0)
+            && address(graveyard) != address(0), "Contracts not set");
 
         _;
     }

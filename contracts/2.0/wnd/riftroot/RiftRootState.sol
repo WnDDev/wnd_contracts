@@ -15,6 +15,7 @@ import "../tokens/consumables/IConsumables.sol";
 import "../tunnels/IMessageHandler.sol";
 import "../tunnels/IRootTunnel.sol";
 import "./IRiftRoot.sol";
+import "./IOldTrainingGrounds.sol";
 
 abstract contract RiftRootState is Initializable, IRiftRoot, IMessageHandler, ERC721HolderUpgradeable, ERC1155HolderUpgradeable, AdminableUpgradeable {
 
@@ -23,6 +24,7 @@ abstract contract RiftRootState is Initializable, IRiftRoot, IMessageHandler, ER
     ISacrificialAlter public sacrificialAlter;
     IConsumables public consumables;
     IRootTunnel public rootTunnel;
+    IOldTrainingGrounds public oldTrainingGrounds;
 
     EnumerableSetUpgradeable.AddressSet internal addressesStaked;
     mapping(address => uint256) public addressToGPStaked;

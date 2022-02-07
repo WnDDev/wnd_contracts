@@ -20,6 +20,7 @@ contract RiftRoot is Initializable, RiftRootGP {
         uint256[] memory _consumableIds,
         uint256[] memory _consumableAmounts)
     external
+    onlyEOA
     whenNotPaused
     contractsAreSet
     {
@@ -51,9 +52,15 @@ contract RiftRoot is Initializable, RiftRootGP {
         for(uint256 i = 0; i < _wndTokenIds.length; i++) {
             uint256 _id = _wndTokenIds[i];
             require(_id != 0, "Bad Wnd ID");
+
             _traits[i] = wnd.getTokenTraits(_id);
-            // Transfer to hold in this contract.
-            wnd.safeTransferFrom(msg.sender, address(this), _id);
+
+            if(wnd.ownerOf(_id) == address(oldTrainingGrounds) && oldTrainingGrounds.ownsToken(_id)) {
+                wnd.safeTransferFrom(address(oldTrainingGrounds), address(this), _id);
+            } else {
+                // Will throw if not in their wallet.
+                wnd.safeTransferFrom(msg.sender, address(this), _id);
+            }
         }
 
         if(_saIds.length > 0) {
