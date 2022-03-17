@@ -14,10 +14,11 @@ contract ChildTunnel is IChildTunnel, FxBaseChildTunnel, Adminable {
     constructor(
         address _fxChild
     ) FxBaseChildTunnel(_fxChild) {
-
+        _pause();
     }
 
     function setMessageHandler(address _messageHandlerAddress) external onlyAdminOrOwner {
+        require(_messageHandlerAddress != address(0), "invalid message handler");
         messageHandler = IMessageHandler(_messageHandlerAddress);
     }
 
@@ -26,6 +27,7 @@ contract ChildTunnel is IChildTunnel, FxBaseChildTunnel, Adminable {
         _sendMessageToRoot(_message);
     }
 
+    // Purposefully exclude the first argument as it is not needed.
     function _processMessageFromRoot(
         uint256,
         address sender,

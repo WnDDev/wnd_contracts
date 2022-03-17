@@ -15,10 +15,11 @@ contract RootTunnel is IRootTunnel, FxBaseRootTunnel, Adminable {
         address _checkpointManager,
         address _fxRoot
     ) FxBaseRootTunnel(_checkpointManager, _fxRoot) {
-
+        _pause();
     }
 
     function setMessageHandler(address _messageHandlerAddress) external onlyAdminOrOwner {
+        require(_messageHandlerAddress != address(0), "invalid message handler");
         messageHandler = IMessageHandler(_messageHandlerAddress);
     }
 

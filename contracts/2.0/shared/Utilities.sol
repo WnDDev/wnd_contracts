@@ -2,8 +2,9 @@
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/security/Pausable.sol";
 
-contract Utilities is Ownable {
+contract Utilities is Ownable, Pausable {
 
     modifier nonZeroAddress(address _address) {
         require(address(0) != _address, "0 address");

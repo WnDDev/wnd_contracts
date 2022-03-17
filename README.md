@@ -134,9 +134,9 @@ wnd/trainingproficiency (Polygon contracts)
 ```
 wnd/tunnels (Polygon contracts)
 ```
-`ChildTunnel`: Contract for sending and receiving messages from the Ethereum network
+`ChildTunnel`: Contract for sending messages to and receiving messages from the Ethereum network. This contract exists on the Polygon network.
 <br/>
-`RootTunnel`: Contract for sending and receiving messages from the Polygon network
+`RootTunnel`: Contract for sending messages to and receiving messages from the Polygon network. This contract exists on the Ethereum network.
 
 ```
 wnd/world (Polygon contracts)
