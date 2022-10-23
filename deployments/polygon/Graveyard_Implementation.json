@@ -1,0 +1,691 @@
+{
+  "address": "0x5fa66f7ce7074Cf5a65F69Ec380918B409958417",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Paused",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Unpaused",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "WizardKilled",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "WizardRevived",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "addAdmin",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "_addresses",
+          "type": "address[]"
+        }
+      ],
+      "name": "addAdmins",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "areContractsSet",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "getFallenWizardsForAddr",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "isAdmin",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "killWizard",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "name": "onERC721Received",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "paused",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "removeAdmin",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "_addresses",
+          "type": "address[]"
+        }
+      ],
+      "name": "removeAdmins",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "reviveWizard",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "_tokenIds",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "reviveWizardBatch",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_wndAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_consumablesAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_worldAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_trainingGameAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setContracts",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_shouldPause",
+          "type": "bool"
+        }
+      ],
+      "name": "setPause",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x785a5d944650f0eec4f5d8e3a46afe589894dda04bb891cf7177f5bef8933de5",
+  "receipt": {
+    "to": null,
+    "from": "0xC7dEFA20Ec54917669f29e15D1ACB7c121b4780c",
+    "contractAddress": "0x5fa66f7ce7074Cf5a65F69Ec380918B409958417",
+    "transactionIndex": 29,
+    "gasUsed": "1300132",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000800000000000000000000100000000000000000000000000000000080000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000800000000000000000000000000004000800000000000000001000000008000000000000000000000100000000000000000020000000000000000000020000000000000000000000000000000100000",
+    "blockHash": "0x1311ce07d067d160069e2030858c3e75c05e718132ba40589a95df4a0b8f1cc2",
+    "transactionHash": "0x785a5d944650f0eec4f5d8e3a46afe589894dda04bb891cf7177f5bef8933de5",
+    "logs": [
+      {
+        "transactionIndex": 29,
+        "blockNumber": 28006009,
+        "transactionHash": "0x785a5d944650f0eec4f5d8e3a46afe589894dda04bb891cf7177f5bef8933de5",
+        "address": "0x0000000000000000000000000000000000001010",
+        "topics": [
+          "0x4dfe1bbbcf077ddc3e01291eea2d5c70c2b422b415d95645b9adcfd678cb1d63",
+          "0x0000000000000000000000000000000000000000000000000000000000001010",
+          "0x000000000000000000000000c7defa20ec54917669f29e15d1acb7c121b4780c",
+          "0x00000000000000000000000067b94473d81d0cd00849d563c94d0432ac988b49"
+        ],
+        "data": "0x00000000000000000000000000000000000000000000000000eb8b4d05b0e240000000000000000000000000000000000000000000000064a57a8148a2ab783b0000000000000000000000000000000000000000000065a6001122b75d8aa69a000000000000000000000000000000000000000000000064a48ef5fb9cfa95fb0000000000000000000000000000000000000000000065a600fcae04633b88da",
+        "logIndex": 90,
+        "blockHash": "0x1311ce07d067d160069e2030858c3e75c05e718132ba40589a95df4a0b8f1cc2"
+      }
+    ],
+    "blockNumber": 28006009,
+    "cumulativeGasUsed": "4959238",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 3,
+  "solcInputHash": "5062a56f00c86ce15abc5fe8c449c9c4",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Paused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Unpaused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"WizardKilled\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"WizardRevived\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"addAdmin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"_addresses\",\"type\":\"address[]\"}],\"name\":\"addAdmins\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"areContractsSet\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"getFallenWizardsForAddr\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"isAdmin\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"killWizard\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"name\":\"onERC721Received\",\"outputs\":[{\"internalType\":\"bytes4\",\"name\":\"\",\"type\":\"bytes4\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"paused\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"removeAdmin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"_addresses\",\"type\":\"address[]\"}],\"name\":\"removeAdmins\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"reviveWizard\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256[]\",\"name\":\"_tokenIds\",\"type\":\"uint256[]\"}],\"name\":\"reviveWizardBatch\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_wndAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_consumablesAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_worldAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_trainingGameAddress\",\"type\":\"address\"}],\"name\":\"setContracts\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_shouldPause\",\"type\":\"bool\"}],\"name\":\"setPause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"onERC721Received(address,address,uint256,bytes)\":{\"details\":\"See {IERC721Receiver-onERC721Received}. Always returns `IERC721Receiver.onERC721Received.selector`.\"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"paused()\":{\"details\":\"Returns true if the contract is paused, and false otherwise.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getFallenWizardsForAddr(address)\":{\"notice\":\"Do not call from other contracts as this could be gassy depending on the number of wizards who have died for this player. \"},\"killWizard(uint256,address)\":{\"notice\":\"Transfer and mark the tokenId as killed. Owner validation must be handled outside of this contract.\"},\"reviveWizard(uint256)\":{\"notice\":\"Revive a wizard by burning a phoenix down. Transfers revived asset to owner's wallet. \"},\"reviveWizardBatch(uint256[])\":{\"notice\":\"Revive a wizard by burning a phoenix down. Transfers revived asset to owner's wallet. \"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/wnd/graveyard/Graveyard.sol\":\"Graveyard\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (access/Ownable.sol)\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../utils/ContextUpgradeable.sol\\\";\\nimport \\\"../proxy/utils/Initializable.sol\\\";\\n\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * By default, the owner account will be the one that deploys the contract. This\\n * can later be changed with {transferOwnership}.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n */\\nabstract contract OwnableUpgradeable is Initializable, ContextUpgradeable {\\n    address private _owner;\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Initializes the contract setting the deployer as the initial owner.\\n     */\\n    function __Ownable_init() internal onlyInitializing {\\n        __Context_init_unchained();\\n        __Ownable_init_unchained();\\n    }\\n\\n    function __Ownable_init_unchained() internal onlyInitializing {\\n        _transferOwnership(_msgSender());\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view virtual returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        require(owner() == _msgSender(), \\\"Ownable: caller is not the owner\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Leaves the contract without owner. It will not be possible to call\\n     * `onlyOwner` functions anymore. Can only be called by the current owner.\\n     *\\n     * NOTE: Renouncing ownership will leave the contract without an owner,\\n     * thereby removing any functionality that is only available to the owner.\\n     */\\n    function renounceOwnership() public virtual onlyOwner {\\n        _transferOwnership(address(0));\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Can only be called by the current owner.\\n     */\\n    function transferOwnership(address newOwner) public virtual onlyOwner {\\n        require(newOwner != address(0), \\\"Ownable: new owner is the zero address\\\");\\n        _transferOwnership(newOwner);\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Internal function without access restriction.\\n     */\\n    function _transferOwnership(address newOwner) internal virtual {\\n        address oldOwner = _owner;\\n        _owner = newOwner;\\n        emit OwnershipTransferred(oldOwner, newOwner);\\n    }\\n    uint256[49] private __gap;\\n}\\n\",\"keccak256\":\"0x9ffedb33e192f8821cbaead72596c79ea87fb28a73f8d3a9f5004449799f8e1b\",\"license\":\"MIT\"},\"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (proxy/utils/Initializable.sol)\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../../utils/AddressUpgradeable.sol\\\";\\n\\n/**\\n * @dev This is a base contract to aid in writing upgradeable contracts, or any kind of contract that will be deployed\\n * behind a proxy. Since a proxied contract can't have a constructor, it's common to move constructor logic to an\\n * external initializer function, usually called `initialize`. It then becomes necessary to protect this initializer\\n * function so it can only be called once. The {initializer} modifier provided by this contract will have this effect.\\n *\\n * TIP: To avoid leaving the proxy in an uninitialized state, the initializer function should be called as early as\\n * possible by providing the encoded function call as the `_data` argument to {ERC1967Proxy-constructor}.\\n *\\n * CAUTION: When used with inheritance, manual care must be taken to not invoke a parent initializer twice, or to ensure\\n * that all initializers are idempotent. This is not verified automatically as constructors are by Solidity.\\n *\\n * [CAUTION]\\n * ====\\n * Avoid leaving a contract uninitialized.\\n *\\n * An uninitialized contract can be taken over by an attacker. This applies to both a proxy and its implementation\\n * contract, which may impact the proxy. To initialize the implementation contract, you can either invoke the\\n * initializer manually, or you can include a constructor to automatically mark it as initialized when it is deployed:\\n *\\n * [.hljs-theme-light.nopadding]\\n * ```\\n * /// @custom:oz-upgrades-unsafe-allow constructor\\n * constructor() initializer {}\\n * ```\\n * ====\\n */\\nabstract contract Initializable {\\n    /**\\n     * @dev Indicates that the contract has been initialized.\\n     */\\n    bool private _initialized;\\n\\n    /**\\n     * @dev Indicates that the contract is in the process of being initialized.\\n     */\\n    bool private _initializing;\\n\\n    /**\\n     * @dev Modifier to protect an initializer function from being invoked twice.\\n     */\\n    modifier initializer() {\\n        // If the contract is initializing we ignore whether _initialized is set in order to support multiple\\n        // inheritance patterns, but we only do this in the context of a constructor, because in other contexts the\\n        // contract may have been reentered.\\n        require(_initializing ? _isConstructor() : !_initialized, \\\"Initializable: contract is already initialized\\\");\\n\\n        bool isTopLevelCall = !_initializing;\\n        if (isTopLevelCall) {\\n            _initializing = true;\\n            _initialized = true;\\n        }\\n\\n        _;\\n\\n        if (isTopLevelCall) {\\n            _initializing = false;\\n        }\\n    }\\n\\n    /**\\n     * @dev Modifier to protect an initialization function so that it can only be invoked by functions with the\\n     * {initializer} modifier, directly or indirectly.\\n     */\\n    modifier onlyInitializing() {\\n        require(_initializing, \\\"Initializable: contract is not initializing\\\");\\n        _;\\n    }\\n\\n    function _isConstructor() private view returns (bool) {\\n        return !AddressUpgradeable.isContract(address(this));\\n    }\\n}\\n\",\"keccak256\":\"0x68861bcc80cacbd498efde75aab6c74a486cc48262660d326c8d7530d9752097\",\"license\":\"MIT\"},\"@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (security/Pausable.sol)\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../utils/ContextUpgradeable.sol\\\";\\nimport \\\"../proxy/utils/Initializable.sol\\\";\\n\\n/**\\n * @dev Contract module which allows children to implement an emergency stop\\n * mechanism that can be triggered by an authorized account.\\n *\\n * This module is used through inheritance. It will make available the\\n * modifiers `whenNotPaused` and `whenPaused`, which can be applied to\\n * the functions of your contract. Note that they will not be pausable by\\n * simply including this module, only once the modifiers are put in place.\\n */\\nabstract contract PausableUpgradeable is Initializable, ContextUpgradeable {\\n    /**\\n     * @dev Emitted when the pause is triggered by `account`.\\n     */\\n    event Paused(address account);\\n\\n    /**\\n     * @dev Emitted when the pause is lifted by `account`.\\n     */\\n    event Unpaused(address account);\\n\\n    bool private _paused;\\n\\n    /**\\n     * @dev Initializes the contract in unpaused state.\\n     */\\n    function __Pausable_init() internal onlyInitializing {\\n        __Context_init_unchained();\\n        __Pausable_init_unchained();\\n    }\\n\\n    function __Pausable_init_unchained() internal onlyInitializing {\\n        _paused = false;\\n    }\\n\\n    /**\\n     * @dev Returns true if the contract is paused, and false otherwise.\\n     */\\n    function paused() public view virtual returns (bool) {\\n        return _paused;\\n    }\\n\\n    /**\\n     * @dev Modifier to make a function callable only when the contract is not paused.\\n     *\\n     * Requirements:\\n     *\\n     * - The contract must not be paused.\\n     */\\n    modifier whenNotPaused() {\\n        require(!paused(), \\\"Pausable: paused\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Modifier to make a function callable only when the contract is paused.\\n     *\\n     * Requirements:\\n     *\\n     * - The contract must be paused.\\n     */\\n    modifier whenPaused() {\\n        require(paused(), \\\"Pausable: not paused\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Triggers stopped state.\\n     *\\n     * Requirements:\\n     *\\n     * - The contract must not be paused.\\n     */\\n    function _pause() internal virtual whenNotPaused {\\n        _paused = true;\\n        emit Paused(_msgSender());\\n    }\\n\\n    /**\\n     * @dev Returns to normal state.\\n     *\\n     * Requirements:\\n     *\\n     * - The contract must be paused.\\n     */\\n    function _unpause() internal virtual whenPaused {\\n        _paused = false;\\n        emit Unpaused(_msgSender());\\n    }\\n    uint256[49] private __gap;\\n}\\n\",\"keccak256\":\"0xf93da311a3b34a8363a759c404d575746fa38351fb29ecd646c608e27219ebec\",\"license\":\"MIT\"},\"@openzeppelin/contracts-upgradeable/token/ERC1155/IERC1155Upgradeable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (token/ERC1155/IERC1155.sol)\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../../utils/introspection/IERC165Upgradeable.sol\\\";\\n\\n/**\\n * @dev Required interface of an ERC1155 compliant contract, as defined in the\\n * https://eips.ethereum.org/EIPS/eip-1155[EIP].\\n *\\n * _Available since v3.1._\\n */\\ninterface IERC1155Upgradeable is IERC165Upgradeable {\\n    /**\\n     * @dev Emitted when `value` tokens of token type `id` are transferred from `from` to `to` by `operator`.\\n     */\\n    event TransferSingle(address indexed operator, address indexed from, address indexed to, uint256 id, uint256 value);\\n\\n    /**\\n     * @dev Equivalent to multiple {TransferSingle} events, where `operator`, `from` and `to` are the same for all\\n     * transfers.\\n     */\\n    event TransferBatch(\\n        address indexed operator,\\n        address indexed from,\\n        address indexed to,\\n        uint256[] ids,\\n        uint256[] values\\n    );\\n\\n    /**\\n     * @dev Emitted when `account` grants or revokes permission to `operator` to transfer their tokens, according to\\n     * `approved`.\\n     */\\n    event ApprovalForAll(address indexed account, address indexed operator, bool approved);\\n\\n    /**\\n     * @dev Emitted when the URI for token type `id` changes to `value`, if it is a non-programmatic URI.\\n     *\\n     * If an {URI} event was emitted for `id`, the standard\\n     * https://eips.ethereum.org/EIPS/eip-1155#metadata-extensions[guarantees] that `value` will equal the value\\n     * returned by {IERC1155MetadataURI-uri}.\\n     */\\n    event URI(string value, uint256 indexed id);\\n\\n    /**\\n     * @dev Returns the amount of tokens of token type `id` owned by `account`.\\n     *\\n     * Requirements:\\n     *\\n     * - `account` cannot be the zero address.\\n     */\\n    function balanceOf(address account, uint256 id) external view returns (uint256);\\n\\n    /**\\n     * @dev xref:ROOT:erc1155.adoc#batch-operations[Batched] version of {balanceOf}.\\n     *\\n     * Requirements:\\n     *\\n     * - `accounts` and `ids` must have the same length.\\n     */\\n    function balanceOfBatch(address[] calldata accounts, uint256[] calldata ids)\\n        external\\n        view\\n        returns (uint256[] memory);\\n\\n    /**\\n     * @dev Grants or revokes permission to `operator` to transfer the caller's tokens, according to `approved`,\\n     *\\n     * Emits an {ApprovalForAll} event.\\n     *\\n     * Requirements:\\n     *\\n     * - `operator` cannot be the caller.\\n     */\\n    function setApprovalForAll(address operator, bool approved) external;\\n\\n    /**\\n     * @dev Returns true if `operator` is approved to transfer ``account``'s tokens.\\n     *\\n     * See {setApprovalForAll}.\\n     */\\n    function isApprovedForAll(address account, address operator) external view returns (bool);\\n\\n    /**\\n     * @dev Transfers `amount` tokens of token type `id` from `from` to `to`.\\n     *\\n     * Emits a {TransferSingle} event.\\n     *\\n     * Requirements:\\n     *\\n     * - `to` cannot be the zero address.\\n     * - If the caller is not `from`, it must be have been approved to spend ``from``'s tokens via {setApprovalForAll}.\\n     * - `from` must have a balance of tokens of type `id` of at least `amount`.\\n     * - If `to` refers to a smart contract, it must implement {IERC1155Receiver-onERC1155Received} and return the\\n     * acceptance magic value.\\n     */\\n    function safeTransferFrom(\\n        address from,\\n        address to,\\n        uint256 id,\\n        uint256 amount,\\n        bytes calldata data\\n    ) external;\\n\\n    /**\\n     * @dev xref:ROOT:erc1155.adoc#batch-operations[Batched] version of {safeTransferFrom}.\\n     *\\n     * Emits a {TransferBatch} event.\\n     *\\n     * Requirements:\\n     *\\n     * - `ids` and `amounts` must have the same length.\\n     * - If `to` refers to a smart contract, it must implement {IERC1155Receiver-onERC1155BatchReceived} and return the\\n     * acceptance magic value.\\n     */\\n    function safeBatchTransferFrom(\\n        address from,\\n        address to,\\n        uint256[] calldata ids,\\n        uint256[] calldata amounts,\\n        bytes calldata data\\n    ) external;\\n}\\n\",\"keccak256\":\"0x1edf4e6819997d1820aea89eff73d4fdaeff0bb87ff2f2b4cb6ad60bfe5ba63c\",\"license\":\"MIT\"},\"@openzeppelin/contracts-upgradeable/token/ERC721/IERC721ReceiverUpgradeable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (token/ERC721/IERC721Receiver.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @title ERC721 token receiver interface\\n * @dev Interface for any contract that wants to support safeTransfers\\n * from ERC721 asset contracts.\\n */\\ninterface IERC721ReceiverUpgradeable {\\n    /**\\n     * @dev Whenever an {IERC721} `tokenId` token is transferred to this contract via {IERC721-safeTransferFrom}\\n     * by `operator` from `from`, this function is called.\\n     *\\n     * It must return its Solidity selector to confirm the token transfer.\\n     * If any other value is returned or the interface is not implemented by the recipient, the transfer will be reverted.\\n     *\\n     * The selector can be obtained in Solidity with `IERC721.onERC721Received.selector`.\\n     */\\n    function onERC721Received(\\n        address operator,\\n        address from,\\n        uint256 tokenId,\\n        bytes calldata data\\n    ) external returns (bytes4);\\n}\\n\",\"keccak256\":\"0x2f359f9d5c56394e60d74401487ab55d8ef0012907b07c9abbb8f998bf5ddfec\",\"license\":\"MIT\"},\"@openzeppelin/contracts-upgradeable/token/ERC721/IERC721Upgradeable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (token/ERC721/IERC721.sol)\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../../utils/introspection/IERC165Upgradeable.sol\\\";\\n\\n/**\\n * @dev Required interface of an ERC721 compliant contract.\\n */\\ninterface IERC721Upgradeable is IERC165Upgradeable {\\n    /**\\n     * @dev Emitted when `tokenId` token is transferred from `from` to `to`.\\n     */\\n    event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);\\n\\n    /**\\n     * @dev Emitted when `owner` enables `approved` to manage the `tokenId` token.\\n     */\\n    event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId);\\n\\n    /**\\n     * @dev Emitted when `owner` enables or disables (`approved`) `operator` to manage all of its assets.\\n     */\\n    event ApprovalForAll(address indexed owner, address indexed operator, bool approved);\\n\\n    /**\\n     * @dev Returns the number of tokens in ``owner``'s account.\\n     */\\n    function balanceOf(address owner) external view returns (uint256 balance);\\n\\n    /**\\n     * @dev Returns the owner of the `tokenId` token.\\n     *\\n     * Requirements:\\n     *\\n     * - `tokenId` must exist.\\n     */\\n    function ownerOf(uint256 tokenId) external view returns (address owner);\\n\\n    /**\\n     * @dev Safely transfers `tokenId` token from `from` to `to`, checking first that contract recipients\\n     * are aware of the ERC721 protocol to prevent tokens from being forever locked.\\n     *\\n     * Requirements:\\n     *\\n     * - `from` cannot be the zero address.\\n     * - `to` cannot be the zero address.\\n     * - `tokenId` token must exist and be owned by `from`.\\n     * - If the caller is not `from`, it must be have been allowed to move this token by either {approve} or {setApprovalForAll}.\\n     * - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function safeTransferFrom(\\n        address from,\\n        address to,\\n        uint256 tokenId\\n    ) external;\\n\\n    /**\\n     * @dev Transfers `tokenId` token from `from` to `to`.\\n     *\\n     * WARNING: Usage of this method is discouraged, use {safeTransferFrom} whenever possible.\\n     *\\n     * Requirements:\\n     *\\n     * - `from` cannot be the zero address.\\n     * - `to` cannot be the zero address.\\n     * - `tokenId` token must be owned by `from`.\\n     * - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function transferFrom(\\n        address from,\\n        address to,\\n        uint256 tokenId\\n    ) external;\\n\\n    /**\\n     * @dev Gives permission to `to` to transfer `tokenId` token to another account.\\n     * The approval is cleared when the token is transferred.\\n     *\\n     * Only a single account can be approved at a time, so approving the zero address clears previous approvals.\\n     *\\n     * Requirements:\\n     *\\n     * - The caller must own the token or be an approved operator.\\n     * - `tokenId` must exist.\\n     *\\n     * Emits an {Approval} event.\\n     */\\n    function approve(address to, uint256 tokenId) external;\\n\\n    /**\\n     * @dev Returns the account approved for `tokenId` token.\\n     *\\n     * Requirements:\\n     *\\n     * - `tokenId` must exist.\\n     */\\n    function getApproved(uint256 tokenId) external view returns (address operator);\\n\\n    /**\\n     * @dev Approve or remove `operator` as an operator for the caller.\\n     * Operators can call {transferFrom} or {safeTransferFrom} for any token owned by the caller.\\n     *\\n     * Requirements:\\n     *\\n     * - The `operator` cannot be the caller.\\n     *\\n     * Emits an {ApprovalForAll} event.\\n     */\\n    function setApprovalForAll(address operator, bool _approved) external;\\n\\n    /**\\n     * @dev Returns if the `operator` is allowed to manage all of the assets of `owner`.\\n     *\\n     * See {setApprovalForAll}\\n     */\\n    function isApprovedForAll(address owner, address operator) external view returns (bool);\\n\\n    /**\\n     * @dev Safely transfers `tokenId` token from `from` to `to`.\\n     *\\n     * Requirements:\\n     *\\n     * - `from` cannot be the zero address.\\n     * - `to` cannot be the zero address.\\n     * - `tokenId` token must exist and be owned by `from`.\\n     * - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}.\\n     * - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function safeTransferFrom(\\n        address from,\\n        address to,\\n        uint256 tokenId,\\n        bytes calldata data\\n    ) external;\\n}\\n\",\"keccak256\":\"0x714a33fd66816f608f6eda908da24eb6009eee50adf4062c86639d4fe508a7b6\",\"license\":\"MIT\"},\"@openzeppelin/contracts-upgradeable/token/ERC721/extensions/IERC721EnumerableUpgradeable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (token/ERC721/extensions/IERC721Enumerable.sol)\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../IERC721Upgradeable.sol\\\";\\n\\n/**\\n * @title ERC-721 Non-Fungible Token Standard, optional enumeration extension\\n * @dev See https://eips.ethereum.org/EIPS/eip-721\\n */\\ninterface IERC721EnumerableUpgradeable is IERC721Upgradeable {\\n    /**\\n     * @dev Returns the total amount of tokens stored by the contract.\\n     */\\n    function totalSupply() external view returns (uint256);\\n\\n    /**\\n     * @dev Returns a token ID owned by `owner` at a given `index` of its token list.\\n     * Use along with {balanceOf} to enumerate all of ``owner``'s tokens.\\n     */\\n    function tokenOfOwnerByIndex(address owner, uint256 index) external view returns (uint256 tokenId);\\n\\n    /**\\n     * @dev Returns a token ID at a given `index` of all the tokens stored by the contract.\\n     * Use along with {totalSupply} to enumerate all tokens.\\n     */\\n    function tokenByIndex(uint256 index) external view returns (uint256);\\n}\\n\",\"keccak256\":\"0x4997774f1c7cd4f3596374621fc674b123a38e36e2ff1d17fbdc9d1111ed6a61\",\"license\":\"MIT\"},\"@openzeppelin/contracts-upgradeable/token/ERC721/utils/ERC721HolderUpgradeable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (token/ERC721/utils/ERC721Holder.sol)\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../IERC721ReceiverUpgradeable.sol\\\";\\nimport \\\"../../../proxy/utils/Initializable.sol\\\";\\n\\n/**\\n * @dev Implementation of the {IERC721Receiver} interface.\\n *\\n * Accepts all token transfers.\\n * Make sure the contract is able to use its token with {IERC721-safeTransferFrom}, {IERC721-approve} or {IERC721-setApprovalForAll}.\\n */\\ncontract ERC721HolderUpgradeable is Initializable, IERC721ReceiverUpgradeable {\\n    function __ERC721Holder_init() internal onlyInitializing {\\n        __ERC721Holder_init_unchained();\\n    }\\n\\n    function __ERC721Holder_init_unchained() internal onlyInitializing {\\n    }\\n    /**\\n     * @dev See {IERC721Receiver-onERC721Received}.\\n     *\\n     * Always returns `IERC721Receiver.onERC721Received.selector`.\\n     */\\n    function onERC721Received(\\n        address,\\n        address,\\n        uint256,\\n        bytes memory\\n    ) public virtual override returns (bytes4) {\\n        return this.onERC721Received.selector;\\n    }\\n    uint256[50] private __gap;\\n}\\n\",\"keccak256\":\"0x663079de534a3b3b4952558df1027a2698c793cc5032a21ad6767764e8de834f\",\"license\":\"MIT\"},\"@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/Address.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Collection of functions related to the address type\\n */\\nlibrary AddressUpgradeable {\\n    /**\\n     * @dev Returns true if `account` is a contract.\\n     *\\n     * [IMPORTANT]\\n     * ====\\n     * It is unsafe to assume that an address for which this function returns\\n     * false is an externally-owned account (EOA) and not a contract.\\n     *\\n     * Among others, `isContract` will return false for the following\\n     * types of addresses:\\n     *\\n     *  - an externally-owned account\\n     *  - a contract in construction\\n     *  - an address where a contract will be created\\n     *  - an address where a contract lived, but was destroyed\\n     * ====\\n     */\\n    function isContract(address account) internal view returns (bool) {\\n        // This method relies on extcodesize, which returns 0 for contracts in\\n        // construction, since the code is only stored at the end of the\\n        // constructor execution.\\n\\n        uint256 size;\\n        assembly {\\n            size := extcodesize(account)\\n        }\\n        return size > 0;\\n    }\\n\\n    /**\\n     * @dev Replacement for Solidity's `transfer`: sends `amount` wei to\\n     * `recipient`, forwarding all available gas and reverting on errors.\\n     *\\n     * https://eips.ethereum.org/EIPS/eip-1884[EIP1884] increases the gas cost\\n     * of certain opcodes, possibly making contracts go over the 2300 gas limit\\n     * imposed by `transfer`, making them unable to receive funds via\\n     * `transfer`. {sendValue} removes this limitation.\\n     *\\n     * https://diligence.consensys.net/posts/2019/09/stop-using-soliditys-transfer-now/[Learn more].\\n     *\\n     * IMPORTANT: because control is transferred to `recipient`, care must be\\n     * taken to not create reentrancy vulnerabilities. Consider using\\n     * {ReentrancyGuard} or the\\n     * https://solidity.readthedocs.io/en/v0.5.11/security-considerations.html#use-the-checks-effects-interactions-pattern[checks-effects-interactions pattern].\\n     */\\n    function sendValue(address payable recipient, uint256 amount) internal {\\n        require(address(this).balance >= amount, \\\"Address: insufficient balance\\\");\\n\\n        (bool success, ) = recipient.call{value: amount}(\\\"\\\");\\n        require(success, \\\"Address: unable to send value, recipient may have reverted\\\");\\n    }\\n\\n    /**\\n     * @dev Performs a Solidity function call using a low level `call`. A\\n     * plain `call` is an unsafe replacement for a function call: use this\\n     * function instead.\\n     *\\n     * If `target` reverts with a revert reason, it is bubbled up by this\\n     * function (like regular Solidity function calls).\\n     *\\n     * Returns the raw returned data. To convert to the expected return value,\\n     * use https://solidity.readthedocs.io/en/latest/units-and-global-variables.html?highlight=abi.decode#abi-encoding-and-decoding-functions[`abi.decode`].\\n     *\\n     * Requirements:\\n     *\\n     * - `target` must be a contract.\\n     * - calling `target` with `data` must not revert.\\n     *\\n     * _Available since v3.1._\\n     */\\n    function functionCall(address target, bytes memory data) internal returns (bytes memory) {\\n        return functionCall(target, data, \\\"Address: low-level call failed\\\");\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-}[`functionCall`], but with\\n     * `errorMessage` as a fallback revert reason when `target` reverts.\\n     *\\n     * _Available since v3.1._\\n     */\\n    function functionCall(\\n        address target,\\n        bytes memory data,\\n        string memory errorMessage\\n    ) internal returns (bytes memory) {\\n        return functionCallWithValue(target, data, 0, errorMessage);\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-}[`functionCall`],\\n     * but also transferring `value` wei to `target`.\\n     *\\n     * Requirements:\\n     *\\n     * - the calling contract must have an ETH balance of at least `value`.\\n     * - the called Solidity function must be `payable`.\\n     *\\n     * _Available since v3.1._\\n     */\\n    function functionCallWithValue(\\n        address target,\\n        bytes memory data,\\n        uint256 value\\n    ) internal returns (bytes memory) {\\n        return functionCallWithValue(target, data, value, \\\"Address: low-level call with value failed\\\");\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCallWithValue-address-bytes-uint256-}[`functionCallWithValue`], but\\n     * with `errorMessage` as a fallback revert reason when `target` reverts.\\n     *\\n     * _Available since v3.1._\\n     */\\n    function functionCallWithValue(\\n        address target,\\n        bytes memory data,\\n        uint256 value,\\n        string memory errorMessage\\n    ) internal returns (bytes memory) {\\n        require(address(this).balance >= value, \\\"Address: insufficient balance for call\\\");\\n        require(isContract(target), \\\"Address: call to non-contract\\\");\\n\\n        (bool success, bytes memory returndata) = target.call{value: value}(data);\\n        return verifyCallResult(success, returndata, errorMessage);\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-}[`functionCall`],\\n     * but performing a static call.\\n     *\\n     * _Available since v3.3._\\n     */\\n    function functionStaticCall(address target, bytes memory data) internal view returns (bytes memory) {\\n        return functionStaticCall(target, data, \\\"Address: low-level static call failed\\\");\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-string-}[`functionCall`],\\n     * but performing a static call.\\n     *\\n     * _Available since v3.3._\\n     */\\n    function functionStaticCall(\\n        address target,\\n        bytes memory data,\\n        string memory errorMessage\\n    ) internal view returns (bytes memory) {\\n        require(isContract(target), \\\"Address: static call to non-contract\\\");\\n\\n        (bool success, bytes memory returndata) = target.staticcall(data);\\n        return verifyCallResult(success, returndata, errorMessage);\\n    }\\n\\n    /**\\n     * @dev Tool to verifies that a low level call was successful, and revert if it wasn't, either by bubbling the\\n     * revert reason using the provided one.\\n     *\\n     * _Available since v4.3._\\n     */\\n    function verifyCallResult(\\n        bool success,\\n        bytes memory returndata,\\n        string memory errorMessage\\n    ) internal pure returns (bytes memory) {\\n        if (success) {\\n            return returndata;\\n        } else {\\n            // Look for revert reason and bubble it up if present\\n            if (returndata.length > 0) {\\n                // The easiest way to bubble the revert reason is using memory via assembly\\n\\n                assembly {\\n                    let returndata_size := mload(returndata)\\n                    revert(add(32, returndata), returndata_size)\\n                }\\n            } else {\\n                revert(errorMessage);\\n            }\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x3f0f878c796dfc7feba6d3c4e3e526c14c7deae8b7bfc71088e3f38fab0d77b3\",\"license\":\"MIT\"},\"@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/Context.sol)\\n\\npragma solidity ^0.8.0;\\nimport \\\"../proxy/utils/Initializable.sol\\\";\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract ContextUpgradeable is Initializable {\\n    function __Context_init() internal onlyInitializing {\\n        __Context_init_unchained();\\n    }\\n\\n    function __Context_init_unchained() internal onlyInitializing {\\n    }\\n    function _msgSender() internal view virtual returns (address) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        return msg.data;\\n    }\\n    uint256[50] private __gap;\\n}\\n\",\"keccak256\":\"0x0b0d548f6381370d394f7a434f994dc678b3ef3e755de106109d61343a685ea7\",\"license\":\"MIT\"},\"@openzeppelin/contracts-upgradeable/utils/introspection/IERC165Upgradeable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/introspection/IERC165.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Interface of the ERC165 standard, as defined in the\\n * https://eips.ethereum.org/EIPS/eip-165[EIP].\\n *\\n * Implementers can declare support of contract interfaces, which can then be\\n * queried by others ({ERC165Checker}).\\n *\\n * For an implementation, see {ERC165}.\\n */\\ninterface IERC165Upgradeable {\\n    /**\\n     * @dev Returns true if this contract implements the interface defined by\\n     * `interfaceId`. See the corresponding\\n     * https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section]\\n     * to learn more about how these ids are created.\\n     *\\n     * This function call must use less than 30 000 gas.\\n     */\\n    function supportsInterface(bytes4 interfaceId) external view returns (bool);\\n}\\n\",\"keccak256\":\"0xc6cef87559d0aeffdf0a99803de655938a7779ec0a3cd5d4383483ad85565a09\",\"license\":\"MIT\"},\"@openzeppelin/contracts-upgradeable/utils/structs/EnumerableSetUpgradeable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/structs/EnumerableSet.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Library for managing\\n * https://en.wikipedia.org/wiki/Set_(abstract_data_type)[sets] of primitive\\n * types.\\n *\\n * Sets have the following properties:\\n *\\n * - Elements are added, removed, and checked for existence in constant time\\n * (O(1)).\\n * - Elements are enumerated in O(n). No guarantees are made on the ordering.\\n *\\n * ```\\n * contract Example {\\n *     // Add the library methods\\n *     using EnumerableSet for EnumerableSet.AddressSet;\\n *\\n *     // Declare a set state variable\\n *     EnumerableSet.AddressSet private mySet;\\n * }\\n * ```\\n *\\n * As of v3.3.0, sets of type `bytes32` (`Bytes32Set`), `address` (`AddressSet`)\\n * and `uint256` (`UintSet`) are supported.\\n */\\nlibrary EnumerableSetUpgradeable {\\n    // To implement this library for multiple types with as little code\\n    // repetition as possible, we write it in terms of a generic Set type with\\n    // bytes32 values.\\n    // The Set implementation uses private functions, and user-facing\\n    // implementations (such as AddressSet) are just wrappers around the\\n    // underlying Set.\\n    // This means that we can only create new EnumerableSets for types that fit\\n    // in bytes32.\\n\\n    struct Set {\\n        // Storage of set values\\n        bytes32[] _values;\\n        // Position of the value in the `values` array, plus 1 because index 0\\n        // means a value is not in the set.\\n        mapping(bytes32 => uint256) _indexes;\\n    }\\n\\n    /**\\n     * @dev Add a value to a set. O(1).\\n     *\\n     * Returns true if the value was added to the set, that is if it was not\\n     * already present.\\n     */\\n    function _add(Set storage set, bytes32 value) private returns (bool) {\\n        if (!_contains(set, value)) {\\n            set._values.push(value);\\n            // The value is stored at length-1, but we add 1 to all indexes\\n            // and use 0 as a sentinel value\\n            set._indexes[value] = set._values.length;\\n            return true;\\n        } else {\\n            return false;\\n        }\\n    }\\n\\n    /**\\n     * @dev Removes a value from a set. O(1).\\n     *\\n     * Returns true if the value was removed from the set, that is if it was\\n     * present.\\n     */\\n    function _remove(Set storage set, bytes32 value) private returns (bool) {\\n        // We read and store the value's index to prevent multiple reads from the same storage slot\\n        uint256 valueIndex = set._indexes[value];\\n\\n        if (valueIndex != 0) {\\n            // Equivalent to contains(set, value)\\n            // To delete an element from the _values array in O(1), we swap the element to delete with the last one in\\n            // the array, and then remove the last element (sometimes called as 'swap and pop').\\n            // This modifies the order of the array, as noted in {at}.\\n\\n            uint256 toDeleteIndex = valueIndex - 1;\\n            uint256 lastIndex = set._values.length - 1;\\n\\n            if (lastIndex != toDeleteIndex) {\\n                bytes32 lastvalue = set._values[lastIndex];\\n\\n                // Move the last value to the index where the value to delete is\\n                set._values[toDeleteIndex] = lastvalue;\\n                // Update the index for the moved value\\n                set._indexes[lastvalue] = valueIndex; // Replace lastvalue's index to valueIndex\\n            }\\n\\n            // Delete the slot where the moved value was stored\\n            set._values.pop();\\n\\n            // Delete the index for the deleted slot\\n            delete set._indexes[value];\\n\\n            return true;\\n        } else {\\n            return false;\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns true if the value is in the set. O(1).\\n     */\\n    function _contains(Set storage set, bytes32 value) private view returns (bool) {\\n        return set._indexes[value] != 0;\\n    }\\n\\n    /**\\n     * @dev Returns the number of values on the set. O(1).\\n     */\\n    function _length(Set storage set) private view returns (uint256) {\\n        return set._values.length;\\n    }\\n\\n    /**\\n     * @dev Returns the value stored at position `index` in the set. O(1).\\n     *\\n     * Note that there are no guarantees on the ordering of values inside the\\n     * array, and it may change when more values are added or removed.\\n     *\\n     * Requirements:\\n     *\\n     * - `index` must be strictly less than {length}.\\n     */\\n    function _at(Set storage set, uint256 index) private view returns (bytes32) {\\n        return set._values[index];\\n    }\\n\\n    /**\\n     * @dev Return the entire set in an array\\n     *\\n     * WARNING: This operation will copy the entire storage to memory, which can be quite expensive. This is designed\\n     * to mostly be used by view accessors that are queried without any gas fees. Developers should keep in mind that\\n     * this function has an unbounded cost, and using it as part of a state-changing function may render the function\\n     * uncallable if the set grows to a point where copying to memory consumes too much gas to fit in a block.\\n     */\\n    function _values(Set storage set) private view returns (bytes32[] memory) {\\n        return set._values;\\n    }\\n\\n    // Bytes32Set\\n\\n    struct Bytes32Set {\\n        Set _inner;\\n    }\\n\\n    /**\\n     * @dev Add a value to a set. O(1).\\n     *\\n     * Returns true if the value was added to the set, that is if it was not\\n     * already present.\\n     */\\n    function add(Bytes32Set storage set, bytes32 value) internal returns (bool) {\\n        return _add(set._inner, value);\\n    }\\n\\n    /**\\n     * @dev Removes a value from a set. O(1).\\n     *\\n     * Returns true if the value was removed from the set, that is if it was\\n     * present.\\n     */\\n    function remove(Bytes32Set storage set, bytes32 value) internal returns (bool) {\\n        return _remove(set._inner, value);\\n    }\\n\\n    /**\\n     * @dev Returns true if the value is in the set. O(1).\\n     */\\n    function contains(Bytes32Set storage set, bytes32 value) internal view returns (bool) {\\n        return _contains(set._inner, value);\\n    }\\n\\n    /**\\n     * @dev Returns the number of values in the set. O(1).\\n     */\\n    function length(Bytes32Set storage set) internal view returns (uint256) {\\n        return _length(set._inner);\\n    }\\n\\n    /**\\n     * @dev Returns the value stored at position `index` in the set. O(1).\\n     *\\n     * Note that there are no guarantees on the ordering of values inside the\\n     * array, and it may change when more values are added or removed.\\n     *\\n     * Requirements:\\n     *\\n     * - `index` must be strictly less than {length}.\\n     */\\n    function at(Bytes32Set storage set, uint256 index) internal view returns (bytes32) {\\n        return _at(set._inner, index);\\n    }\\n\\n    /**\\n     * @dev Return the entire set in an array\\n     *\\n     * WARNING: This operation will copy the entire storage to memory, which can be quite expensive. This is designed\\n     * to mostly be used by view accessors that are queried without any gas fees. Developers should keep in mind that\\n     * this function has an unbounded cost, and using it as part of a state-changing function may render the function\\n     * uncallable if the set grows to a point where copying to memory consumes too much gas to fit in a block.\\n     */\\n    function values(Bytes32Set storage set) internal view returns (bytes32[] memory) {\\n        return _values(set._inner);\\n    }\\n\\n    // AddressSet\\n\\n    struct AddressSet {\\n        Set _inner;\\n    }\\n\\n    /**\\n     * @dev Add a value to a set. O(1).\\n     *\\n     * Returns true if the value was added to the set, that is if it was not\\n     * already present.\\n     */\\n    function add(AddressSet storage set, address value) internal returns (bool) {\\n        return _add(set._inner, bytes32(uint256(uint160(value))));\\n    }\\n\\n    /**\\n     * @dev Removes a value from a set. O(1).\\n     *\\n     * Returns true if the value was removed from the set, that is if it was\\n     * present.\\n     */\\n    function remove(AddressSet storage set, address value) internal returns (bool) {\\n        return _remove(set._inner, bytes32(uint256(uint160(value))));\\n    }\\n\\n    /**\\n     * @dev Returns true if the value is in the set. O(1).\\n     */\\n    function contains(AddressSet storage set, address value) internal view returns (bool) {\\n        return _contains(set._inner, bytes32(uint256(uint160(value))));\\n    }\\n\\n    /**\\n     * @dev Returns the number of values in the set. O(1).\\n     */\\n    function length(AddressSet storage set) internal view returns (uint256) {\\n        return _length(set._inner);\\n    }\\n\\n    /**\\n     * @dev Returns the value stored at position `index` in the set. O(1).\\n     *\\n     * Note that there are no guarantees on the ordering of values inside the\\n     * array, and it may change when more values are added or removed.\\n     *\\n     * Requirements:\\n     *\\n     * - `index` must be strictly less than {length}.\\n     */\\n    function at(AddressSet storage set, uint256 index) internal view returns (address) {\\n        return address(uint160(uint256(_at(set._inner, index))));\\n    }\\n\\n    /**\\n     * @dev Return the entire set in an array\\n     *\\n     * WARNING: This operation will copy the entire storage to memory, which can be quite expensive. This is designed\\n     * to mostly be used by view accessors that are queried without any gas fees. Developers should keep in mind that\\n     * this function has an unbounded cost, and using it as part of a state-changing function may render the function\\n     * uncallable if the set grows to a point where copying to memory consumes too much gas to fit in a block.\\n     */\\n    function values(AddressSet storage set) internal view returns (address[] memory) {\\n        bytes32[] memory store = _values(set._inner);\\n        address[] memory result;\\n\\n        assembly {\\n            result := store\\n        }\\n\\n        return result;\\n    }\\n\\n    // UintSet\\n\\n    struct UintSet {\\n        Set _inner;\\n    }\\n\\n    /**\\n     * @dev Add a value to a set. O(1).\\n     *\\n     * Returns true if the value was added to the set, that is if it was not\\n     * already present.\\n     */\\n    function add(UintSet storage set, uint256 value) internal returns (bool) {\\n        return _add(set._inner, bytes32(value));\\n    }\\n\\n    /**\\n     * @dev Removes a value from a set. O(1).\\n     *\\n     * Returns true if the value was removed from the set, that is if it was\\n     * present.\\n     */\\n    function remove(UintSet storage set, uint256 value) internal returns (bool) {\\n        return _remove(set._inner, bytes32(value));\\n    }\\n\\n    /**\\n     * @dev Returns true if the value is in the set. O(1).\\n     */\\n    function contains(UintSet storage set, uint256 value) internal view returns (bool) {\\n        return _contains(set._inner, bytes32(value));\\n    }\\n\\n    /**\\n     * @dev Returns the number of values on the set. O(1).\\n     */\\n    function length(UintSet storage set) internal view returns (uint256) {\\n        return _length(set._inner);\\n    }\\n\\n    /**\\n     * @dev Returns the value stored at position `index` in the set. O(1).\\n     *\\n     * Note that there are no guarantees on the ordering of values inside the\\n     * array, and it may change when more values are added or removed.\\n     *\\n     * Requirements:\\n     *\\n     * - `index` must be strictly less than {length}.\\n     */\\n    function at(UintSet storage set, uint256 index) internal view returns (uint256) {\\n        return uint256(_at(set._inner, index));\\n    }\\n\\n    /**\\n     * @dev Return the entire set in an array\\n     *\\n     * WARNING: This operation will copy the entire storage to memory, which can be quite expensive. This is designed\\n     * to mostly be used by view accessors that are queried without any gas fees. Developers should keep in mind that\\n     * this function has an unbounded cost, and using it as part of a state-changing function may render the function\\n     * uncallable if the set grows to a point where copying to memory consumes too much gas to fit in a block.\\n     */\\n    function values(UintSet storage set) internal view returns (uint256[] memory) {\\n        bytes32[] memory store = _values(set._inner);\\n        uint256[] memory result;\\n\\n        assembly {\\n            result := store\\n        }\\n\\n        return result;\\n    }\\n}\\n\",\"keccak256\":\"0x0004699ba89fa356eb0d58d815b42dcf52eccd2765e95256631b838bce2556bc\",\"license\":\"MIT\"},\"contracts/shared/AdminableUpgradeable.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\nimport \\\"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol\\\";\\n\\nimport \\\"./UtilitiesUpgradeable.sol\\\";\\n\\n// Do not add state to this contract.\\n//\\ncontract AdminableUpgradeable is UtilitiesUpgradeable {\\n\\n    mapping(address => bool) private admins;\\n\\n    function __Adminable_init() internal initializer {\\n        UtilitiesUpgradeable.__Utilities__init();\\n    }\\n\\n    function addAdmin(address _address) external onlyOwner {\\n        admins[_address] = true;\\n    }\\n\\n    function addAdmins(address[] calldata _addresses) external onlyOwner {\\n        for(uint256 i = 0; i < _addresses.length; i++) {\\n            admins[_addresses[i]] = true;\\n        }\\n    }\\n\\n    function removeAdmin(address _address) external onlyOwner {\\n        admins[_address] = false;\\n    }\\n\\n    function removeAdmins(address[] calldata _addresses) external onlyOwner {\\n        for(uint256 i = 0; i < _addresses.length; i++) {\\n            admins[_addresses[i]] = false;\\n        }\\n    }\\n\\n    function setPause(bool _shouldPause) external onlyAdminOrOwner {\\n        if(_shouldPause) {\\n            _pause();\\n        } else {\\n            _unpause();\\n        }\\n    }\\n\\n    function isAdmin(address _address) public view returns(bool) {\\n        return admins[_address];\\n    }\\n\\n    modifier onlyAdmin() {\\n        require(admins[msg.sender], \\\"Not admin\\\");\\n        _;\\n    }\\n\\n    modifier onlyAdminOrOwner() {\\n        require(admins[msg.sender] || isOwner(), \\\"Not admin or owner\\\");\\n        _;\\n    }\\n    uint256[50] private __gap;\\n}\",\"keccak256\":\"0xb9c7084cdb7d0cc6d4f3e7ce6e68e5f75c0a99bf311b1975ed27d8ff3088c7b6\",\"license\":\"MIT\"},\"contracts/shared/UtilitiesUpgradeable.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\nimport \\\"@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol\\\";\\nimport \\\"@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol\\\";\\nimport \\\"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol\\\";\\n\\ncontract UtilitiesUpgradeable is Initializable, OwnableUpgradeable, PausableUpgradeable {\\n\\n    function __Utilities__init() internal initializer {\\n        OwnableUpgradeable.__Ownable_init();\\n        PausableUpgradeable.__Pausable_init();\\n\\n        _pause();\\n    }\\n\\n    modifier nonZeroAddress(address _address) {\\n        require(address(0) != _address, \\\"0 address\\\");\\n        _;\\n    }\\n\\n    modifier nonZeroLength(uint[] memory _array) {\\n        require(_array.length > 0, \\\"Empty array\\\");\\n        _;\\n    }\\n\\n    modifier lengthsAreEqual(uint[] memory _array1, uint[] memory _array2) {\\n        require(_array1.length == _array2.length, \\\"Unequal lengths\\\");\\n        _;\\n    }\\n\\n    modifier onlyEOA() {\\n        /* solhint-disable avoid-tx-origin */\\n        require(msg.sender == tx.origin, \\\"No contracts\\\");\\n        _;\\n    }\\n\\n    function isOwner() internal view returns(bool) {\\n        return owner() == msg.sender;\\n    }\\n}\",\"keccak256\":\"0x6d8894c4823d477c71487e9d325ab3d7a595723868621f522b664f717341769b\",\"license\":\"MIT\"},\"contracts/wnd/graveyard/Graveyard.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\nimport \\\"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol\\\";\\n\\nimport \\\"./IGraveyard.sol\\\";\\nimport \\\"./GraveyardContracts.sol\\\";\\n\\ncontract Graveyard is Initializable, GraveyardContracts {\\n    using EnumerableSetUpgradeable for EnumerableSetUpgradeable.UintSet;\\n\\n    function initialize() public initializer {\\n        GraveyardContracts.__GraveyardContracts_init();\\n    }\\n\\n    /** Transfer and mark the tokenId as killed. Owner validation must be handled outside of this contract.*/\\n    function killWizard(uint256 _tokenId, address _owner) external override onlyAdminOrOwner {\\n        // change state\\n        // assume calling origin is the owner. This should be validated by the caller of this function.\\n        // It must be validated by the caller because it could be staked into a contract instead of in the caller's wallet.\\n        ownerToKilledTokens[_owner].add(_tokenId);\\n\\n        // transfer after state change\\n        // Gone from the world forever :'(\\n        world.removeWizardFromWorld(_tokenId, address(this));\\n\\n        emit WizardKilled(_owner, _tokenId);\\n    }\\n    \\n    /** Revive a wizard by burning a phoenix down. Transfers revived asset to owner's wallet. */\\n    function reviveWizard(uint256 _tokenId) external override onlyEOA {\\n        _revive(_tokenId);\\n    }\\n    \\n    /** Revive a wizard by burning a phoenix down. Transfers revived asset to owner's wallet. */\\n    function reviveWizardBatch(uint256[] calldata _tokenIds) external override onlyEOA {\\n        require(_tokenIds.length > 0, \\\"must give token ids to revive\\\");\\n        for (uint256 i = 0; i < _tokenIds.length; i++) {\\n            _revive(_tokenIds[i]);\\n        }\\n    }\\n\\n    function _revive(uint256 _tokenId) internal {\\n        require(ownerToKilledTokens[_msgSender()].contains(_tokenId), \\\"Not dead or not owned by caller.\\\");\\n\\n        // Will revert if the caller does not have a phoenix down.\\n        consumables.burn(phoenixDownTokenId, 1, _msgSender());\\n        trainingGame.resetWizard(_tokenId);\\n        ownerToKilledTokens[_msgSender()].remove(_tokenId);\\n\\n        // transfer after state change\\n        wnd.transferFrom(address(this), _msgSender(), _tokenId);\\n\\n        emit WizardRevived(_msgSender(), _tokenId);\\n    }\\n    \\n    /** Do not call from other contracts as this could be gassy depending on the number of wizards who have died for this player. */\\n    function getFallenWizardsForAddr(address _address) external view override returns(uint256[] memory) {\\n        EnumerableSetUpgradeable.UintSet storage set = ownerToKilledTokens[_address];\\n        uint256[] memory tokenIds = new uint256[] (set.length());\\n        for (uint256 i = 0; i < set.length(); i++) {\\n            tokenIds[i] = set.at(i);\\n        }\\n        return tokenIds;\\n    }\\n}\",\"keccak256\":\"0x5a511bf47540f85006029494eb3599820e60cb4c9d8c83bd7a2a5b5b813c288b\",\"license\":\"MIT\"},\"contracts/wnd/graveyard/GraveyardContracts.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\nimport \\\"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol\\\";\\n\\nimport \\\"./IGraveyard.sol\\\";\\nimport \\\"./GraveyardState.sol\\\";\\n\\nabstract contract GraveyardContracts is Initializable, IGraveyard, GraveyardState {\\n\\n    function __GraveyardContracts_init() internal initializer {\\n        GraveyardState.__GraveyardState_init();\\n    }\\n\\n    function setContracts(\\n        address _wndAddress,\\n        address _consumablesAddress,\\n        address _worldAddress,\\n        address _trainingGameAddress)\\n    external\\n    onlyAdminOrOwner\\n    {\\n        wnd = IWnD(_wndAddress);\\n        consumables = IConsumables(_consumablesAddress);\\n        world = IWorld(_worldAddress);\\n        trainingGame = ITrainingGame(_trainingGameAddress);\\n    }\\n\\n    modifier contractsAreSet() {\\n        require(areContractsSet(), \\\"Graveyard: Contracts not set\\\");\\n\\n        _;\\n    }\\n\\n    function areContractsSet() public view returns(bool) {\\n        return address(wnd) != address(0)\\n            && address(consumables) != address(0)\\n            && address(world) != address(0)\\n            && address(trainingGame) != address(0);\\n    }\\n}\",\"keccak256\":\"0xcf6b2eb2c7cb5c89a2bca8e352d89dcd6aad63ef4310bca7cabc9dfe688082a4\",\"license\":\"MIT\"},\"contracts/wnd/graveyard/GraveyardState.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\nimport \\\"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol\\\";\\nimport \\\"@openzeppelin/contracts-upgradeable/utils/structs/EnumerableSetUpgradeable.sol\\\";\\nimport \\\"@openzeppelin/contracts-upgradeable/token/ERC721/utils/ERC721HolderUpgradeable.sol\\\";\\n\\nimport \\\"../../shared/AdminableUpgradeable.sol\\\";\\nimport \\\"../tokens/wnd/IWnD.sol\\\";\\nimport \\\"../tokens/consumables/IConsumables.sol\\\";\\nimport \\\"../world/IWorld.sol\\\";\\nimport \\\"../traininggame/ITrainingGame.sol\\\";\\n\\ncontract GraveyardState is Initializable, ERC721HolderUpgradeable, AdminableUpgradeable {\\n    using EnumerableSetUpgradeable for EnumerableSetUpgradeable.UintSet;\\n\\n    event WizardKilled(address indexed _owner, uint256 indexed _tokenId);\\n    event WizardRevived(address indexed _owner, uint256 indexed _tokenId);\\n\\n    mapping(address => EnumerableSetUpgradeable.UintSet) internal ownerToKilledTokens;\\n\\n    IWnD internal wnd;\\n    IConsumables internal consumables;\\n    IWorld internal world;\\n    ITrainingGame internal trainingGame;\\n\\n    uint256 internal phoenixDownTokenId;\\n\\n    function __GraveyardState_init() internal initializer {\\n        AdminableUpgradeable.__Adminable_init();\\n        ERC721HolderUpgradeable.__ERC721Holder_init();\\n        phoenixDownTokenId = 4;\\n    }\\n}\",\"keccak256\":\"0x26377a6834385c0510b05a2f005bbf3bec8e651215a131e651d6f02d9b520fa0\",\"license\":\"MIT\"},\"contracts/wnd/graveyard/IGraveyard.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\ninterface IGraveyard {\\n    // sends the given wizard tokenId to this contract to be considered 'dead'. Can be revived though, so that's cool.\\n    function killWizard(uint256 _tokenId, address _owner) external;\\n    // attempts to bring the given dead wizard tokenId back to life and give to caller. This token must have been owned by the caller when it died.\\n    function reviveWizard(uint256 _tokenId) external;\\n    // attempts to revive many wizards at once.\\n    function reviveWizardBatch(uint256[] calldata _tokenIds) external;\\n    // Returns the rift tier for the given user based on how much GP is staked at the rift.\\n    function getFallenWizardsForAddr(address _address) external view returns(uint256[] memory);\\n}\",\"keccak256\":\"0xf74bad0c1ffe0d20254757a47d589dd6e6433eec14ce4ed35ad41998f804cb58\",\"license\":\"MIT\"},\"contracts/wnd/tokens/consumables/IConsumables.sol\":{\"content\":\"// SPDX-License-Identifier: MIT LICENSE\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"@openzeppelin/contracts-upgradeable/token/ERC1155/IERC1155Upgradeable.sol\\\";\\n\\ninterface IConsumables is IERC1155Upgradeable {\\n    function mint(uint256 typeId, uint256 qty, address recipient) external;\\n    function burn(uint256 typeId, uint256 qty, address burnFrom) external;\\n    function adminSafeTransferFrom(address _from, address _to, uint256 _id, uint256 _amount) external;\\n    function adminSafeBatchTransferFrom(address _from, address _to, uint256[] calldata _ids, uint256[] calldata _amounts) external;\\n}\",\"keccak256\":\"0xf2f0b559a0da8dc3842b6473dee404a81626dac03fcfd9d1c405864fdedc8f87\",\"license\":\"MIT LICENSE\"},\"contracts/wnd/tokens/wnd/IWnD.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\nimport \\\"@openzeppelin/contracts-upgradeable/token/ERC721/extensions/IERC721EnumerableUpgradeable.sol\\\";\\n\\ninterface IWnDRoot {\\n    function transferFrom(address _from, address _to, uint256 _tokenId) external;\\n    function safeTransferFrom(address _from, address _to, uint256 _tokenId) external;\\n    function getTokenTraits(uint256 _tokenId) external returns(WizardDragon memory);\\n    function ownerOf(uint256 _tokenId) external returns(address);\\n    function approve(address _to, uint256 _tokenId) external;\\n}\\n\\ninterface IWnD is IERC721EnumerableUpgradeable {\\n    function mint(address _to, uint256 _tokenId, WizardDragon calldata _traits) external;\\n    function burn(uint256 _tokenId) external;\\n    function isWizard(uint256 _tokenId) external view returns(bool);\\n    function getTokenTraits(uint256 _tokenId) external view returns(WizardDragon memory);\\n    function exists(uint256 _tokenId) external view returns(bool);\\n    function adminTransferFrom(address _from, address _to, uint256 _tokenId) external;\\n}\\n\\nstruct WizardDragon {\\n    bool isWizard;\\n    uint8 body;\\n    uint8 head;\\n    uint8 spell;\\n    uint8 eyes;\\n    uint8 neck;\\n    uint8 mouth;\\n    uint8 wand;\\n    uint8 tail;\\n    uint8 rankIndex;\\n}\",\"keccak256\":\"0xd2b1e55a748db0f2b8d325ade1825479f655ed36e08ef977ffc1484cd9a403fa\",\"license\":\"MIT\"},\"contracts/wnd/traininggame/ITrainingGame.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\ninterface ITrainingGame {\\n\\n    // Trains the given wizard. Must be staked at the training grounds.\\n    function train(uint256 _tokenId, bool equipWizard) external;\\n\\n    // Trains the given wizards. Must be staked at the training grounds.\\n    function trainBatch(TrainingInfo[] calldata _tokensToTrain) external;\\n\\n    // Reveals the reward for the given token id.\\n    function revealTrainingReward(uint256 _tokenId) external;\\n\\n\\n    // Reveals the rewards for the given token ids.\\n    function revealTrainingRewardBatch(uint256[] calldata _tokenIds) external;\\n\\n    // Indicates if the given wizard can play the game.\\n    function canWizardPlay(uint256 _tokenId) external view returns(bool);\\n\\n    // Returns the timestamp the wizard can next play the game. May be in the past.\\n    function timeWizardCanPlayNext(uint256 _tokenId) external view returns(uint256);\\n\\n    // Returns if a wizard is currently training.\\n    function isWizardTraining(uint256 _tokenId) external view returns(bool);\\n\\n    // Resets the stats of the Wizard\\n    function resetWizard(uint256 _tokenId) external;\\n}\\n\\nstruct TrainingInfo {\\n    uint256 tokenId;\\n    bool isEquipped;\\n}\",\"keccak256\":\"0x98ff3bcfd981d0bbb8f9183d8af3b59d7ed1482a57f856118911709c79393492\",\"license\":\"MIT\"},\"contracts/wnd/world/IWorld.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\ninterface IWorldReadOnly {\\n    // Returns the total number of wizards staked somewhere in the world. Does not include in route wizards.\\n    function totalNumberOfWizards() external view returns(uint256);\\n\\n    // Returns the total number of dragons staked somewhere in the world.\\n    function totalNumberOfDragons() external view returns(uint256);\\n\\n    // Returns the location of the token. If it returns NONEXISTENT, the token is not staked in the world.\\n    function locationOfToken(uint256 _tokenId) external view returns(Location);\\n\\n    // Returns if the token exists in the world. This also means the world contract holds the token.\\n    function isTokenInWorld(uint256 _tokenId) external view returns(bool);\\n\\n    function getStakeableDragonLocations() external view returns(Location[] memory);\\n\\n    function numberOfDragonsStakedAtRank(uint256 _rank) external view returns(uint256);\\n\\n    // Returns the number of dragons that are staked at the given location and rank.\\n    function numberOfDragonsStakedAtLocationAtRank(Location _location, uint256 _rank) external view returns(uint256);\\n\\n    // Returns the number of wizards that are staked at the given location.\\n    function numberOfWizardsStakedAtLocation(Location _location) external view returns(uint256);\\n\\n    // Returns the dragon ID that is at the given location at the given index. Will revert if invalid index.\\n    function dragonAtLocationAtRankAtIndex(Location _location, uint256 _rank, uint256 _index) external view returns(uint256);\\n\\n    // Returns the wizard ID that is at the given location at the given index. Will revert if invalid index.\\n    function wizardAtLocationAtIndex(Location _location, uint256 _index) external view returns(uint256);\\n\\n    // Returns all dragons at the given location for the given owner. Avoid using in a contract-to-contract call.\\n    function getDragonsAtLocationForOwner(Location _location, address _owner) external view returns(uint256[] memory);\\n\\n    // Returns all dragons at the given location for the given owner. Avoid using in a contract-to-contract call.\\n    function getWizardsAtLocationForOwner(Location _location, address _owner) external view returns(uint256[] memory);\\n\\n    // The owner of the given token.\\n    function ownerOfTokenId(uint256 _tokenId) external view returns(address);\\n\\n    // Returns if the passed in address is the owner of the token id.\\n    function isOwnerOfTokenId(uint256 _tokenId, address _owner) external view returns(bool);\\n\\n    // Returns a random dragon owner based on the given seed.\\n    // Dragons that are staked at the given location have an increased odds of being selected.\\n    // If _locationOfEvent is set to NONEXISTENT, all dragons staked in the world will have the same odds.\\n    // If this function returns 0, there was not a random dragon staked.\\n    function getRandomDragonOwner(uint256 _randomSeed, Location _locationOfEvent) external view returns(address);\\n}\\n\\ninterface IWorldEditable {\\n\\n    // Begins staking the given wizard at the given location. Must be approved to transfer from their wallet to this contract.\\n    // May revert for various reasons.\\n    function startStakeWizards(uint256[] calldata _tokenIds, Location _location) external;\\n\\n    // Finishes the stake for the given wizard ID. Must be called after the random has been seeded.\\n    function finishStakeWizards(uint256[] calldata _tokenIds, Location _location) external;\\n\\n    // Unstakes the given wizard from the given location.\\n    // May revert for various reasons.\\n    function startUnstakeWizards(uint256[] calldata _tokenIds, Location _location) external;\\n\\n    // Finishes the unstake process for the given wizard id. Must be called after the random has been seeded.\\n    function finishUnstakeWizards(uint256[] calldata _tokenIds, Location _location) external;\\n\\n    // Stakes the given dragon at the given location. Must be approved to transfer from their wallet to this contract.\\n    // May revert for various reasons.\\n    function stakeDragons(uint256[] calldata _tokenIds, Location _location) external;\\n\\n    // Unstakes the given dragon at the given location. Must be approved to transfer from their wallet to this contract.\\n    // May revert for various reasons.\\n    function unstakeDragons(uint256[] calldata _tokenIds, Location _location) external;\\n\\n    // When calling, should already have ensured this is a wizard and is not in the world already.\\n    // Transfers the 721 to the world contract.\\n    // Admin only.\\n    function addWizardToWorld(uint256 _tokenId, address _owner, Location _location) external;\\n\\n    // When calling, should already have ensured this is a wizard and is not in the world already.\\n    // Transfers the 721 to the world contract.\\n    // Admin only.\\n    function addDragonToWorld(uint256 _tokenId, address _owner, Location _location) external;\\n\\n    // Game logic should already validate that this is an option.\\n    // Transfers the 721 to the _owner.\\n    // Admin only.\\n    function removeWizardFromWorld(uint256 _tokenId, address _owner) external;\\n\\n    // Game logic should already validate that this is an option.\\n    // Transfers the 721 to the _owner.\\n    // Admin only.\\n    function removeDragonFromWorld(uint256 _tokenId, address _owner) external;\\n\\n    // When calling, game logic should already validate who owns the token, if they have permission, and that\\n    // the destination location makes sense.\\n    // Only callable by admin/owner.\\n    function changeLocationOfWizard(uint256 _tokenId, Location _location) external;\\n\\n    function setStakeableDragonLocations(Location[] calldata _locations) external;\\n}\\n\\ninterface IWorld is IWorldEditable, IWorldReadOnly {\\n\\n}\\n\\nenum Location {\\n    NONEXISTENT,\\n    RIFT,\\n    TRAINING_GROUNDS_ENTERING,\\n    TRAINING_GROUNDS,\\n    TRAINING_GROUNDS_LEAVING\\n}\",\"keccak256\":\"0x12e6461ca64e6f68e85202709870e24156b39e34a1a2d7023883b3de30823e0a\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50611690806100206000396000f3fe608060405234801561001057600080fd5b50600436106101165760003560e01c806384d25054116100a2578063bedb86fb11610071578063bedb86fb14610245578063bf989b6e14610258578063df02c2681461026b578063e58727261461027e578063f2fde38b1461029e57600080fd5b806384d25054146101fc5780638cdcc4b41461020f5780638da5cb5b146102175780639c54df641461023257600080fd5b8063377e11e0116100e9578063377e11e0146101bb5780635c975abb146101ce57806370480275146101d9578063715018a6146101ec5780638129fc1c146101f457600080fd5b80630434829f1461011b578063150b7a02146101305780631785f53c1461016c57806324d7806c1461017f575b600080fd5b61012e61012936600461124b565b6102b1565b005b61014e61013e36600461128d565b630a85bd0160e11b949350505050565b6040516001600160e01b031990911681526020015b60405180910390f35b61012e61017a366004611369565b6103b8565b6101ab61018d366004611369565b6001600160a01b0316600090815260c9602052604090205460ff1690565b6040519015158152602001610163565b61012e6101c93660046113d0565b610403565b60975460ff166101ab565b61012e6101e7366004611369565b6104a4565b61012e6104f2565b61012e610528565b61012e61020a366004611412565b6105a2565b6101ab6105e9565b6065546040516001600160a01b039091168152602001610163565b61012e6102403660046113d0565b610642565b61012e61025336600461142b565b6106de565b61012e610266366004611454565b610731565b61012e6102793660046113d0565b6107bf565b61029161028c366004611369565b610888565b60405161016391906114a8565b61012e6102ac366004611369565b610944565b33600090815260c9602052604090205460ff16806102d257506102d26109dc565b6102f75760405162461bcd60e51b81526004016102ee906114ec565b60405180910390fd5b6001600160a01b038116600090815260fc602052604090206103199083610a00565b5060ff54604051631d684a1760e21b8152600481018490523060248201526001600160a01b03909116906375a1285c90604401600060405180830381600087803b15801561036657600080fd5b505af115801561037a573d6000803e3d6000fd5b50506040518492506001600160a01b03841691507f85c63ffb70c6fe096da191e8311f3e1becca260ae0c1c2097cf649c02668e31590600090a35050565b6065546001600160a01b031633146103e25760405162461bcd60e51b81526004016102ee90611518565b6001600160a01b0316600090815260c960205260409020805460ff19169055565b6065546001600160a01b0316331461042d5760405162461bcd60e51b81526004016102ee90611518565b60005b8181101561049f57600060c960008585858181106104505761045061154d565b90506020020160208101906104659190611369565b6001600160a01b031681526020810191909152604001600020805460ff19169115159190911790558061049781611579565b915050610430565b505050565b6065546001600160a01b031633146104ce5760405162461bcd60e51b81526004016102ee90611518565b6001600160a01b0316600090815260c960205260409020805460ff19166001179055565b6065546001600160a01b0316331461051c5760405162461bcd60e51b81526004016102ee90611518565b6105266000610a15565b565b600054610100900460ff166105435760005460ff1615610547565b303b155b6105635760405162461bcd60e51b81526004016102ee90611594565b600054610100900460ff16158015610585576000805461ffff19166101011790555b61058d610a67565b801561059f576000805461ff00191690555b50565b3332146105e05760405162461bcd60e51b815260206004820152600c60248201526b4e6f20636f6e74726163747360a01b60448201526064016102ee565b61059f81610acc565b60fd546000906001600160a01b031615801590610610575060fe546001600160a01b031615155b8015610626575060ff546001600160a01b031615155b801561063d5750610100546001600160a01b031615155b905090565b6065546001600160a01b0316331461066c5760405162461bcd60e51b81526004016102ee90611518565b60005b8181101561049f57600160c9600085858581811061068f5761068f61154d565b90506020020160208101906106a49190611369565b6001600160a01b031681526020810191909152604001600020805460ff1916911515919091179055806106d681611579565b91505061066f565b33600090815260c9602052604090205460ff16806106ff57506106ff6109dc565b61071b5760405162461bcd60e51b81526004016102ee906114ec565b80156107295761059f610cef565b61059f610d87565b33600090815260c9602052604090205460ff168061075257506107526109dc565b61076e5760405162461bcd60e51b81526004016102ee906114ec565b60fd80546001600160a01b039586166001600160a01b03199182161790915560fe80549486169482169490941790935560ff8054928516928416929092179091556101008054919093169116179055565b3332146107fd5760405162461bcd60e51b815260206004820152600c60248201526b4e6f20636f6e74726163747360a01b60448201526064016102ee565b8061084a5760405162461bcd60e51b815260206004820152601d60248201527f6d757374206769766520746f6b656e2069647320746f2072657669766500000060448201526064016102ee565b60005b8181101561049f5761087683838381811061086a5761086a61154d565b90506020020135610acc565b8061088081611579565b91505061084d565b6001600160a01b038116600090815260fc602052604081206060916108ac82610e01565b67ffffffffffffffff8111156108c4576108c4611277565b6040519080825280602002602001820160405280156108ed578160200160208202803683370190505b50905060005b6108fc83610e01565b81101561093c5761090d8382610e0b565b82828151811061091f5761091f61154d565b60209081029190910101528061093481611579565b9150506108f3565b509392505050565b6065546001600160a01b0316331461096e5760405162461bcd60e51b81526004016102ee90611518565b6001600160a01b0381166109d35760405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b60648201526084016102ee565b61059f81610a15565b6000336109f16065546001600160a01b031690565b6001600160a01b031614905090565b6000610a0c8383610e17565b90505b92915050565b606580546001600160a01b038381166001600160a01b0319831681179093556040519116919082907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e090600090a35050565b600054610100900460ff16610a825760005460ff1615610a86565b303b155b610aa25760405162461bcd60e51b81526004016102ee90611594565b600054610100900460ff16158015610ac4576000805461ffff19166101011790555b61058d610e66565b33600090815260fc60205260409020610ae59082610eed565b610b315760405162461bcd60e51b815260206004820181905260248201527f4e6f742064656164206f72206e6f74206f776e65642062792063616c6c65722e60448201526064016102ee565b60fe546101015460408051631d24e23160e21b8152600481019290925260016024830152336044830152516001600160a01b039092169163749388c49160648082019260009290919082900301818387803b158015610b8f57600080fd5b505af1158015610ba3573d6000803e3d6000fd5b505061010054604051636aee3d0760e11b8152600481018590526001600160a01b03909116925063d5dc7a0e9150602401600060405180830381600087803b158015610bee57600080fd5b505af1158015610c02573d6000803e3d6000fd5b50505050610c348160fc6000610c153390565b6001600160a01b03168152602081019190915260400160002090610f05565b5060fd546001600160a01b03166323b872dd30336040516001600160e01b031960e085901b1681526001600160a01b0392831660048201529116602482015260448101849052606401600060405180830381600087803b158015610c9757600080fd5b505af1158015610cab573d6000803e3d6000fd5b5050505080610cb73390565b6001600160a01b03167f443e736538f4d08332c4161771306987ca06ab660df32a5cb01d0f475b19240d60405160405180910390a350565b60975460ff1615610d355760405162461bcd60e51b815260206004820152601060248201526f14185d5cd8589b194e881c185d5cd95960821b60448201526064016102ee565b6097805460ff191660011790557f62e78cea01bee320cd4e420270b5ea74000d11b0c9f74754ebdbfc544b05a258610d6a3390565b6040516001600160a01b03909116815260200160405180910390a1565b60975460ff16610dd05760405162461bcd60e51b815260206004820152601460248201527314185d5cd8589b194e881b9bdd081c185d5cd95960621b60448201526064016102ee565b6097805460ff191690557f5db9ee0a495bf2e6ff9c91a7834c1ba4fdd244a5e8aa4e537bd38aeae4b073aa33610d6a565b6000610a0f825490565b6000610a0c8383610f11565b6000818152600183016020526040812054610e5e57508154600181810184556000848152602080822090930184905584548482528286019093526040902091909155610a0f565b506000610a0f565b600054610100900460ff16610e815760005460ff1615610e85565b303b155b610ea15760405162461bcd60e51b81526004016102ee90611594565b600054610100900460ff16158015610ec3576000805461ffff19166101011790555b610ecb610f3b565b610ed3610fa0565b600461010155801561059f576000805461ff001916905550565b60008181526001830160205260408120541515610a0c565b6000610a0c8383610fcf565b6000826000018281548110610f2857610f2861154d565b9060005260206000200154905092915050565b600054610100900460ff16610f565760005460ff1615610f5a565b303b155b610f765760405162461bcd60e51b81526004016102ee90611594565b600054610100900460ff16158015610f98576000805461ffff19166101011790555b61058d6110c2565b600054610100900460ff16610fc75760405162461bcd60e51b81526004016102ee906115e2565b610526611137565b600081815260018301602052604081205480156110b8576000610ff360018361162d565b85549091506000906110079060019061162d565b905081811461106c5760008660000182815481106110275761102761154d565b906000526020600020015490508087600001848154811061104a5761104a61154d565b6000918252602080832090910192909255918252600188019052604090208390555b855486908061107d5761107d611644565b600190038181906000526020600020016000905590558560010160008681526020019081526020016000206000905560019350505050610a0f565b6000915050610a0f565b600054610100900460ff166110dd5760005460ff16156110e1565b303b155b6110fd5760405162461bcd60e51b81526004016102ee90611594565b600054610100900460ff1615801561111f576000805461ffff19166101011790555b61112761115e565b61112f611195565b61058d610cef565b600054610100900460ff166105265760405162461bcd60e51b81526004016102ee906115e2565b600054610100900460ff166111855760405162461bcd60e51b81526004016102ee906115e2565b61118d611137565b6105266111cc565b600054610100900460ff166111bc5760405162461bcd60e51b81526004016102ee906115e2565b6111c4611137565b6105266111fc565b600054610100900460ff166111f35760405162461bcd60e51b81526004016102ee906115e2565b61052633610a15565b600054610100900460ff166112235760405162461bcd60e51b81526004016102ee906115e2565b6097805460ff19169055565b80356001600160a01b038116811461124657600080fd5b919050565b6000806040838503121561125e57600080fd5b8235915061126e6020840161122f565b90509250929050565b634e487b7160e01b600052604160045260246000fd5b600080600080608085870312156112a357600080fd5b6112ac8561122f565b93506112ba6020860161122f565b925060408501359150606085013567ffffffffffffffff808211156112de57600080fd5b818701915087601f8301126112f257600080fd5b81358181111561130457611304611277565b604051601f8201601f19908116603f0116810190838211818310171561132c5761132c611277565b816040528281528a602084870101111561134557600080fd5b82602086016020830137600060208483010152809550505050505092959194509250565b60006020828403121561137b57600080fd5b610a0c8261122f565b60008083601f84011261139657600080fd5b50813567ffffffffffffffff8111156113ae57600080fd5b6020830191508360208260051b85010111156113c957600080fd5b9250929050565b600080602083850312156113e357600080fd5b823567ffffffffffffffff8111156113fa57600080fd5b61140685828601611384565b90969095509350505050565b60006020828403121561142457600080fd5b5035919050565b60006020828403121561143d57600080fd5b8135801515811461144d57600080fd5b9392505050565b6000806000806080858703121561146a57600080fd5b6114738561122f565b93506114816020860161122f565b925061148f6040860161122f565b915061149d6060860161122f565b905092959194509250565b6020808252825182820181905260009190848201906040850190845b818110156114e0578351835292840192918401916001016114c4565b50909695505050505050565b6020808252601290820152712737ba1030b236b4b71037b91037bbb732b960711b604082015260600190565b6020808252818101527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604082015260600190565b634e487b7160e01b600052603260045260246000fd5b634e487b7160e01b600052601160045260246000fd5b600060001982141561158d5761158d611563565b5060010190565b6020808252602e908201527f496e697469616c697a61626c653a20636f6e747261637420697320616c72656160408201526d191e481a5b9a5d1a585b1a5e995960921b606082015260800190565b6020808252602b908201527f496e697469616c697a61626c653a20636f6e7472616374206973206e6f74206960408201526a6e697469616c697a696e6760a81b606082015260800190565b60008282101561163f5761163f611563565b500390565b634e487b7160e01b600052603160045260246000fdfea2646970667358221220102376c51a4c1b61c8f29bec8f6c7bbc4201ef01492955fee950b1911793e12064736f6c63430008090033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106101165760003560e01c806384d25054116100a2578063bedb86fb11610071578063bedb86fb14610245578063bf989b6e14610258578063df02c2681461026b578063e58727261461027e578063f2fde38b1461029e57600080fd5b806384d25054146101fc5780638cdcc4b41461020f5780638da5cb5b146102175780639c54df641461023257600080fd5b8063377e11e0116100e9578063377e11e0146101bb5780635c975abb146101ce57806370480275146101d9578063715018a6146101ec5780638129fc1c146101f457600080fd5b80630434829f1461011b578063150b7a02146101305780631785f53c1461016c57806324d7806c1461017f575b600080fd5b61012e61012936600461124b565b6102b1565b005b61014e61013e36600461128d565b630a85bd0160e11b949350505050565b6040516001600160e01b031990911681526020015b60405180910390f35b61012e61017a366004611369565b6103b8565b6101ab61018d366004611369565b6001600160a01b0316600090815260c9602052604090205460ff1690565b6040519015158152602001610163565b61012e6101c93660046113d0565b610403565b60975460ff166101ab565b61012e6101e7366004611369565b6104a4565b61012e6104f2565b61012e610528565b61012e61020a366004611412565b6105a2565b6101ab6105e9565b6065546040516001600160a01b039091168152602001610163565b61012e6102403660046113d0565b610642565b61012e61025336600461142b565b6106de565b61012e610266366004611454565b610731565b61012e6102793660046113d0565b6107bf565b61029161028c366004611369565b610888565b60405161016391906114a8565b61012e6102ac366004611369565b610944565b33600090815260c9602052604090205460ff16806102d257506102d26109dc565b6102f75760405162461bcd60e51b81526004016102ee906114ec565b60405180910390fd5b6001600160a01b038116600090815260fc602052604090206103199083610a00565b5060ff54604051631d684a1760e21b8152600481018490523060248201526001600160a01b03909116906375a1285c90604401600060405180830381600087803b15801561036657600080fd5b505af115801561037a573d6000803e3d6000fd5b50506040518492506001600160a01b03841691507f85c63ffb70c6fe096da191e8311f3e1becca260ae0c1c2097cf649c02668e31590600090a35050565b6065546001600160a01b031633146103e25760405162461bcd60e51b81526004016102ee90611518565b6001600160a01b0316600090815260c960205260409020805460ff19169055565b6065546001600160a01b0316331461042d5760405162461bcd60e51b81526004016102ee90611518565b60005b8181101561049f57600060c960008585858181106104505761045061154d565b90506020020160208101906104659190611369565b6001600160a01b031681526020810191909152604001600020805460ff19169115159190911790558061049781611579565b915050610430565b505050565b6065546001600160a01b031633146104ce5760405162461bcd60e51b81526004016102ee90611518565b6001600160a01b0316600090815260c960205260409020805460ff19166001179055565b6065546001600160a01b0316331461051c5760405162461bcd60e51b81526004016102ee90611518565b6105266000610a15565b565b600054610100900460ff166105435760005460ff1615610547565b303b155b6105635760405162461bcd60e51b81526004016102ee90611594565b600054610100900460ff16158015610585576000805461ffff19166101011790555b61058d610a67565b801561059f576000805461ff00191690555b50565b3332146105e05760405162461bcd60e51b815260206004820152600c60248201526b4e6f20636f6e74726163747360a01b60448201526064016102ee565b61059f81610acc565b60fd546000906001600160a01b031615801590610610575060fe546001600160a01b031615155b8015610626575060ff546001600160a01b031615155b801561063d5750610100546001600160a01b031615155b905090565b6065546001600160a01b0316331461066c5760405162461bcd60e51b81526004016102ee90611518565b60005b8181101561049f57600160c9600085858581811061068f5761068f61154d565b90506020020160208101906106a49190611369565b6001600160a01b031681526020810191909152604001600020805460ff1916911515919091179055806106d681611579565b91505061066f565b33600090815260c9602052604090205460ff16806106ff57506106ff6109dc565b61071b5760405162461bcd60e51b81526004016102ee906114ec565b80156107295761059f610cef565b61059f610d87565b33600090815260c9602052604090205460ff168061075257506107526109dc565b61076e5760405162461bcd60e51b81526004016102ee906114ec565b60fd80546001600160a01b039586166001600160a01b03199182161790915560fe80549486169482169490941790935560ff8054928516928416929092179091556101008054919093169116179055565b3332146107fd5760405162461bcd60e51b815260206004820152600c60248201526b4e6f20636f6e74726163747360a01b60448201526064016102ee565b8061084a5760405162461bcd60e51b815260206004820152601d60248201527f6d757374206769766520746f6b656e2069647320746f2072657669766500000060448201526064016102ee565b60005b8181101561049f5761087683838381811061086a5761086a61154d565b90506020020135610acc565b8061088081611579565b91505061084d565b6001600160a01b038116600090815260fc602052604081206060916108ac82610e01565b67ffffffffffffffff8111156108c4576108c4611277565b6040519080825280602002602001820160405280156108ed578160200160208202803683370190505b50905060005b6108fc83610e01565b81101561093c5761090d8382610e0b565b82828151811061091f5761091f61154d565b60209081029190910101528061093481611579565b9150506108f3565b509392505050565b6065546001600160a01b0316331461096e5760405162461bcd60e51b81526004016102ee90611518565b6001600160a01b0381166109d35760405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b60648201526084016102ee565b61059f81610a15565b6000336109f16065546001600160a01b031690565b6001600160a01b031614905090565b6000610a0c8383610e17565b90505b92915050565b606580546001600160a01b038381166001600160a01b0319831681179093556040519116919082907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e090600090a35050565b600054610100900460ff16610a825760005460ff1615610a86565b303b155b610aa25760405162461bcd60e51b81526004016102ee90611594565b600054610100900460ff16158015610ac4576000805461ffff19166101011790555b61058d610e66565b33600090815260fc60205260409020610ae59082610eed565b610b315760405162461bcd60e51b815260206004820181905260248201527f4e6f742064656164206f72206e6f74206f776e65642062792063616c6c65722e60448201526064016102ee565b60fe546101015460408051631d24e23160e21b8152600481019290925260016024830152336044830152516001600160a01b039092169163749388c49160648082019260009290919082900301818387803b158015610b8f57600080fd5b505af1158015610ba3573d6000803e3d6000fd5b505061010054604051636aee3d0760e11b8152600481018590526001600160a01b03909116925063d5dc7a0e9150602401600060405180830381600087803b158015610bee57600080fd5b505af1158015610c02573d6000803e3d6000fd5b50505050610c348160fc6000610c153390565b6001600160a01b03168152602081019190915260400160002090610f05565b5060fd546001600160a01b03166323b872dd30336040516001600160e01b031960e085901b1681526001600160a01b0392831660048201529116602482015260448101849052606401600060405180830381600087803b158015610c9757600080fd5b505af1158015610cab573d6000803e3d6000fd5b5050505080610cb73390565b6001600160a01b03167f443e736538f4d08332c4161771306987ca06ab660df32a5cb01d0f475b19240d60405160405180910390a350565b60975460ff1615610d355760405162461bcd60e51b815260206004820152601060248201526f14185d5cd8589b194e881c185d5cd95960821b60448201526064016102ee565b6097805460ff191660011790557f62e78cea01bee320cd4e420270b5ea74000d11b0c9f74754ebdbfc544b05a258610d6a3390565b6040516001600160a01b03909116815260200160405180910390a1565b60975460ff16610dd05760405162461bcd60e51b815260206004820152601460248201527314185d5cd8589b194e881b9bdd081c185d5cd95960621b60448201526064016102ee565b6097805460ff191690557f5db9ee0a495bf2e6ff9c91a7834c1ba4fdd244a5e8aa4e537bd38aeae4b073aa33610d6a565b6000610a0f825490565b6000610a0c8383610f11565b6000818152600183016020526040812054610e5e57508154600181810184556000848152602080822090930184905584548482528286019093526040902091909155610a0f565b506000610a0f565b600054610100900460ff16610e815760005460ff1615610e85565b303b155b610ea15760405162461bcd60e51b81526004016102ee90611594565b600054610100900460ff16158015610ec3576000805461ffff19166101011790555b610ecb610f3b565b610ed3610fa0565b600461010155801561059f576000805461ff001916905550565b60008181526001830160205260408120541515610a0c565b6000610a0c8383610fcf565b6000826000018281548110610f2857610f2861154d565b9060005260206000200154905092915050565b600054610100900460ff16610f565760005460ff1615610f5a565b303b155b610f765760405162461bcd60e51b81526004016102ee90611594565b600054610100900460ff16158015610f98576000805461ffff19166101011790555b61058d6110c2565b600054610100900460ff16610fc75760405162461bcd60e51b81526004016102ee906115e2565b610526611137565b600081815260018301602052604081205480156110b8576000610ff360018361162d565b85549091506000906110079060019061162d565b905081811461106c5760008660000182815481106110275761102761154d565b906000526020600020015490508087600001848154811061104a5761104a61154d565b6000918252602080832090910192909255918252600188019052604090208390555b855486908061107d5761107d611644565b600190038181906000526020600020016000905590558560010160008681526020019081526020016000206000905560019350505050610a0f565b6000915050610a0f565b600054610100900460ff166110dd5760005460ff16156110e1565b303b155b6110fd5760405162461bcd60e51b81526004016102ee90611594565b600054610100900460ff1615801561111f576000805461ffff19166101011790555b61112761115e565b61112f611195565b61058d610cef565b600054610100900460ff166105265760405162461bcd60e51b81526004016102ee906115e2565b600054610100900460ff166111855760405162461bcd60e51b81526004016102ee906115e2565b61118d611137565b6105266111cc565b600054610100900460ff166111bc5760405162461bcd60e51b81526004016102ee906115e2565b6111c4611137565b6105266111fc565b600054610100900460ff166111f35760405162461bcd60e51b81526004016102ee906115e2565b61052633610a15565b600054610100900460ff166112235760405162461bcd60e51b81526004016102ee906115e2565b6097805460ff19169055565b80356001600160a01b038116811461124657600080fd5b919050565b6000806040838503121561125e57600080fd5b8235915061126e6020840161122f565b90509250929050565b634e487b7160e01b600052604160045260246000fd5b600080600080608085870312156112a357600080fd5b6112ac8561122f565b93506112ba6020860161122f565b925060408501359150606085013567ffffffffffffffff808211156112de57600080fd5b818701915087601f8301126112f257600080fd5b81358181111561130457611304611277565b604051601f8201601f19908116603f0116810190838211818310171561132c5761132c611277565b816040528281528a602084870101111561134557600080fd5b82602086016020830137600060208483010152809550505050505092959194509250565b60006020828403121561137b57600080fd5b610a0c8261122f565b60008083601f84011261139657600080fd5b50813567ffffffffffffffff8111156113ae57600080fd5b6020830191508360208260051b85010111156113c957600080fd5b9250929050565b600080602083850312156113e357600080fd5b823567ffffffffffffffff8111156113fa57600080fd5b61140685828601611384565b90969095509350505050565b60006020828403121561142457600080fd5b5035919050565b60006020828403121561143d57600080fd5b8135801515811461144d57600080fd5b9392505050565b6000806000806080858703121561146a57600080fd5b6114738561122f565b93506114816020860161122f565b925061148f6040860161122f565b915061149d6060860161122f565b905092959194509250565b6020808252825182820181905260009190848201906040850190845b818110156114e0578351835292840192918401916001016114c4565b50909695505050505050565b6020808252601290820152712737ba1030b236b4b71037b91037bbb732b960711b604082015260600190565b6020808252818101527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604082015260600190565b634e487b7160e01b600052603260045260246000fd5b634e487b7160e01b600052601160045260246000fd5b600060001982141561158d5761158d611563565b5060010190565b6020808252602e908201527f496e697469616c697a61626c653a20636f6e747261637420697320616c72656160408201526d191e481a5b9a5d1a585b1a5e995960921b606082015260800190565b6020808252602b908201527f496e697469616c697a61626c653a20636f6e7472616374206973206e6f74206960408201526a6e697469616c697a696e6760a81b606082015260800190565b60008282101561163f5761163f611563565b500390565b634e487b7160e01b600052603160045260246000fdfea2646970667358221220102376c51a4c1b61c8f29bec8f6c7bbc4201ef01492955fee950b1911793e12064736f6c63430008090033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "onERC721Received(address,address,uint256,bytes)": {
+        "details": "See {IERC721Receiver-onERC721Received}. Always returns `IERC721Receiver.onERC721Received.selector`."
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "paused()": {
+        "details": "Returns true if the contract is paused, and false otherwise."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "getFallenWizardsForAddr(address)": {
+        "notice": "Do not call from other contracts as this could be gassy depending on the number of wizards who have died for this player. "
+      },
+      "killWizard(uint256,address)": {
+        "notice": "Transfer and mark the tokenId as killed. Owner validation must be handled outside of this contract."
+      },
+      "reviveWizard(uint256)": {
+        "notice": "Revive a wizard by burning a phoenix down. Transfers revived asset to owner's wallet. "
+      },
+      "reviveWizardBatch(uint256[])": {
+        "notice": "Revive a wizard by burning a phoenix down. Transfers revived asset to owner's wallet. "
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 2787,
+        "contract": "contracts/wnd/graveyard/Graveyard.sol:Graveyard",
+        "label": "_initialized",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_bool"
+      },
+      {
+        "astId": 2790,
+        "contract": "contracts/wnd/graveyard/Graveyard.sol:Graveyard",
+        "label": "_initializing",
+        "offset": 1,
+        "slot": "0",
+        "type": "t_bool"
+      },
+      {
+        "astId": 6549,
+        "contract": "contracts/wnd/graveyard/Graveyard.sol:Graveyard",
+        "label": "__gap",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_array(t_uint256)50_storage"
+      },
+      {
+        "astId": 6838,
+        "contract": "contracts/wnd/graveyard/Graveyard.sol:Graveyard",
+        "label": "__gap",
+        "offset": 0,
+        "slot": "51",
+        "type": "t_array(t_uint256)50_storage"
+      },
+      {
+        "astId": 2665,
+        "contract": "contracts/wnd/graveyard/Graveyard.sol:Graveyard",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "101",
+        "type": "t_address"
+      },
+      {
+        "astId": 2779,
+        "contract": "contracts/wnd/graveyard/Graveyard.sol:Graveyard",
+        "label": "__gap",
+        "offset": 0,
+        "slot": "102",
+        "type": "t_array(t_uint256)49_storage"
+      },
+      {
+        "astId": 2875,
+        "contract": "contracts/wnd/graveyard/Graveyard.sol:Graveyard",
+        "label": "_paused",
+        "offset": 0,
+        "slot": "151",
+        "type": "t_bool"
+      },
+      {
+        "astId": 2966,
+        "contract": "contracts/wnd/graveyard/Graveyard.sol:Graveyard",
+        "label": "__gap",
+        "offset": 0,
+        "slot": "152",
+        "type": "t_array(t_uint256)49_storage"
+      },
+      {
+        "astId": 12059,
+        "contract": "contracts/wnd/graveyard/Graveyard.sol:Graveyard",
+        "label": "admins",
+        "offset": 0,
+        "slot": "201",
+        "type": "t_mapping(t_address,t_bool)"
+      },
+      {
+        "astId": 12219,
+        "contract": "contracts/wnd/graveyard/Graveyard.sol:Graveyard",
+        "label": "__gap",
+        "offset": 0,
+        "slot": "202",
+        "type": "t_array(t_uint256)50_storage"
+      },
+      {
+        "astId": 16853,
+        "contract": "contracts/wnd/graveyard/Graveyard.sol:Graveyard",
+        "label": "ownerToKilledTokens",
+        "offset": 0,
+        "slot": "252",
+        "type": "t_mapping(t_address,t_struct(UintSet)7569_storage)"
+      },
+      {
+        "astId": 16856,
+        "contract": "contracts/wnd/graveyard/Graveyard.sol:Graveyard",
+        "label": "wnd",
+        "offset": 0,
+        "slot": "253",
+        "type": "t_contract(IWnD)22052"
+      },
+      {
+        "astId": 16859,
+        "contract": "contracts/wnd/graveyard/Graveyard.sol:Graveyard",
+        "label": "consumables",
+        "offset": 0,
+        "slot": "254",
+        "type": "t_contract(IConsumables)20627"
+      },
+      {
+        "astId": 16862,
+        "contract": "contracts/wnd/graveyard/Graveyard.sol:Graveyard",
+        "label": "world",
+        "offset": 0,
+        "slot": "255",
+        "type": "t_contract(IWorld)26243"
+      },
+      {
+        "astId": 16865,
+        "contract": "contracts/wnd/graveyard/Graveyard.sol:Graveyard",
+        "label": "trainingGame",
+        "offset": 0,
+        "slot": "256",
+        "type": "t_contract(ITrainingGame)22440"
+      },
+      {
+        "astId": 16867,
+        "contract": "contracts/wnd/graveyard/Graveyard.sol:Graveyard",
+        "label": "phoenixDownTokenId",
+        "offset": 0,
+        "slot": "257",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_bytes32)dyn_storage": {
+        "base": "t_bytes32",
+        "encoding": "dynamic_array",
+        "label": "bytes32[]",
+        "numberOfBytes": "32"
+      },
+      "t_array(t_uint256)49_storage": {
+        "base": "t_uint256",
+        "encoding": "inplace",
+        "label": "uint256[49]",
+        "numberOfBytes": "1568"
+      },
+      "t_array(t_uint256)50_storage": {
+        "base": "t_uint256",
+        "encoding": "inplace",
+        "label": "uint256[50]",
+        "numberOfBytes": "1600"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_contract(IConsumables)20627": {
+        "encoding": "inplace",
+        "label": "contract IConsumables",
+        "numberOfBytes": "20"
+      },
+      "t_contract(ITrainingGame)22440": {
+        "encoding": "inplace",
+        "label": "contract ITrainingGame",
+        "numberOfBytes": "20"
+      },
+      "t_contract(IWnD)22052": {
+        "encoding": "inplace",
+        "label": "contract IWnD",
+        "numberOfBytes": "20"
+      },
+      "t_contract(IWorld)26243": {
+        "encoding": "inplace",
+        "label": "contract IWorld",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_mapping(t_address,t_struct(UintSet)7569_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => struct EnumerableSetUpgradeable.UintSet)",
+        "numberOfBytes": "32",
+        "value": "t_struct(UintSet)7569_storage"
+      },
+      "t_mapping(t_bytes32,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_bytes32",
+        "label": "mapping(bytes32 => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_struct(Set)7111_storage": {
+        "encoding": "inplace",
+        "label": "struct EnumerableSetUpgradeable.Set",
+        "members": [
+          {
+            "astId": 7106,
+            "contract": "contracts/wnd/graveyard/Graveyard.sol:Graveyard",
+            "label": "_values",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_array(t_bytes32)dyn_storage"
+          },
+          {
+            "astId": 7110,
+            "contract": "contracts/wnd/graveyard/Graveyard.sol:Graveyard",
+            "label": "_indexes",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_bytes32,t_uint256)"
+          }
+        ],
+        "numberOfBytes": "64"
+      },
+      "t_struct(UintSet)7569_storage": {
+        "encoding": "inplace",
+        "label": "struct EnumerableSetUpgradeable.UintSet",
+        "members": [
+          {
+            "astId": 7568,
+            "contract": "contracts/wnd/graveyard/Graveyard.sol:Graveyard",
+            "label": "_inner",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_struct(Set)7111_storage"
+          }
+        ],
+        "numberOfBytes": "64"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+node_modules
+.env
+coverage
+coverage.json
+typechain
+typechain-types
+deployments.json
+package-lock.json
+yarn.lock
+
+#Hardhat files
+cache
+artifacts
+.openzeppelin
+data/analytics
+data/event_cache
