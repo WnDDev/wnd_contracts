@@ -16,13 +16,22 @@
 
 Thousands of Wizards and Dragons compete in a tower in the metaverse. Tempting treasures of GP await, with deadly high stakes. All the metadata and images are generated and stored 100% on-chain. No IPFS. No API. Just the Ethereum blockchain.
 
-### Project structure
+### Getting started
+1. Initialize your repo and download dependencies:
+```
+npm i
+```
+2. Initialize your environment variables:
+```
+mv .env.example .env
+```
+3. Change every env item in `.env`
+4. Compile hardhat and run tests
+```
+npx hardhat compile && npx hardhat test
+```
 
-Contracts under the 1.0 subfolder denote contracts made during Act 1 / Training 1.0.
-
-Contracts under the 2.0 subfolder denote contracts made for Act 1.5 / WnD Reborn
-
-### Contract 2.0 summaries
+### Polygon / New contract summaries
 
 **NOTE1**: Each contract has an interface to allow for easy cross-contract calling of external functions.
 <br/>**NOTE2**: Each contract has a State base contract that holds all state variables and inherits and initializes all other required utility contracts + libraries to ensure upgradability without malforming storage
@@ -30,7 +39,7 @@ Contracts under the 2.0 subfolder denote contracts made for Act 1.5 / WnD Reborn
 <br/>**NOTE4**: Token contracts have an 'adminTransfer' function that allows admin senders to transfer tokens without approval (to save transactions + gas fees for users). These functions were separated out to not mess with the openzeppelin default implementation.
 
 ```
-shared/ramdomizer (Polygon contracts)
+shared/randomizer (Polygon contracts)
 ```
 *Not used anymore.*
 
